@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sandra Beldine Otieno | Data Analytics Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #161b2c;
+      --accent: #4ea8de;
+      --accent-soft: rgba(78,168,222,0.15);
+      --text-main: #f5f7ff;
+      --text-muted: #a8b2d1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #151a30 0, #050814 55%, #020308 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    .brand {
+      font-size: 18px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .nav-links a {
+      margin-left: 18px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
+      header { justify-content: center; text-align: center; }
+      .nav-links { margin-top: 8px; }
+    }
+
+    .hero-title {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 18px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .hero-text { color: var(--text-muted); margin-bottom: 20px; }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .tag {
+      border-radius: 999px;
+      background: var(--accent-soft);
+      padding: 6px 14px;
+      font-size: 12px;
+      color: var(--accent);
+    }
+
+    .hero-actions a {
+      display: inline-block;
+      margin-right: 12px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+    .hero-actions a.primary {
+      background: var(--accent);
+      color: #020308;
+      font-weight: 600;
+    }
+    .hero-actions a:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #151a30, #101425);
+      border-radius: 18px;
+      padding: 22px 22px 18px;
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+    }
+    .hero-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 12px 0 16px;
+    }
+    .hero-metric {
+      flex: 1 1 110px;
+      background: #0f1322;
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+    .hero-metric span {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .hero-metric strong {
+      font-size: 18px;
+    }
+    .hero-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    section p.section-intro {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+      gap: 28px;
+    }
+    @media (max-width: 800px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .skills-list span {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #0f1322;
+      color: var(--text-muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+    .project-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(255,255,255,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-title {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .project-meta {
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .project-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .project-tags span {
+      font-size: 11px;
+      background: #0f1322;
+      color: var(--text-muted);
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+    .project-links a {
+      font-size: 12px;
+      margin-right: 10px;
+    }
+
+    .article-item {
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #101426;
+      border: 1px solid rgba(255,255,255,0.03);
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+    .article-item span {
+      display: block;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    footer {
+      margin-top: 16px;
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="brand">SANDRA OT IENO</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">Data Analytics & Business Intelligence Portfolio</h1>
+        <p class="hero-subtitle">Sandra Beldine Otieno · Nairobi, Kenya</p>
+        <p class="hero-text">
+          I am a data analytics professional who transforms complex, multi-country datasets into
+          clear, actionable insights. I work across business intelligence, predictive analytics and
+          consumer & market insights to support evidence-based decisions for organisations in Africa.
+        </p>
+        <div class="hero-tags">
+          <div class="tag">Data Analytics</div>
+          <div class="tag">Business Intelligence</div>
+          <div class="tag">Consumer Insights</div>
+          <div class="tag">Python · SQL · Power BI</div>
+        </div>
+        <div class="hero-actions">
+          <a class="primary" href="#projects">View Projects</a>
+          <a href="#articles">Read Articles</a>
+          <a href="https://github.com/sandraotieno" target="_blank">GitHub Profile</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Snapshot</h3>
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <span>Experience</span>
+            <strong>6+ yrs</strong>
+          </div>
+          <div class="hero-metric">
+            <span>Key Focus</span>
+            <strong>Analytics & BI</strong>
+          </div>
+          <div class="hero-metric">
+            <span>Regions</span>
+            <strong>20+ African Mkts</strong>
+          </div>
+        </div>
+        <p class="hero-note">
+          Skilled in data modelling, dashboarding, forecasting and insight generation across retail,
+          FMCG, financial services and development sectors.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT + SKILLS -->
+    <section id="about">
+      <h2>About & Skills</h2>
+      <p class="section-intro">
+        My work sits at the intersection of data analytics, BI development and market/consumer insight.
+        I am comfortable moving from raw data to analytical models, dashboards and decision-ready stories.
+      </p>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>About Me</h3>
+          <p style="font-size:14px; color: var(--text-muted); margin-top:8px;">
+            I have a background in <strong>Data Science & Analytics</strong> and over six years of
+            experience working with multi-country data across African markets. I enjoy cleaning and
+            structuring datasets, exploring patterns, building models, and explaining what the numbers
+            mean for real decisions – whether for banks, FMCG brands, retailers or development actors.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Core Skills</h3>
+          <div class="skills-list">
+            <span>Python (Pandas, NumPy, Scikit-Learn)</span>
+            <span>SQL</span>
+            <span>Power BI</span>
+            <span>Tableau</span>
+            <span>Advanced Excel</span>
+            <span>Data Cleaning & Prep</span>
+            <span>EDA & Statistical Analysis</span>
+            <span>Forecasting & Modelling</span>
+            <span>Segmentation & Behavioural Analytics</span>
+            <span>Dashboard Design</span>
+            <span>Insight Reporting & Storytelling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="section-intro">
+        A selection of analytics projects. Each project links to the full notebook or repository on GitHub.
+        To add a new project, duplicate one of the cards below and update the title, description and links.
+      </p>
+
+      <div class="grid">
+        <!-- PROJECT 1 -->
+        <div class="project-card">
+          <div>
+            <div class="project-title">Market Basket Analysis using Apriori & FP-Growth</div>
+            <div class="project-meta">Association rules · Retail demand · Multi-country data</div>
+            <p class="project-desc">
+              Analysed purchase combinations and basket structures across African markets using
+              Apriori and FP-Growth to identify core vs discretionary items and resilience strategies
+              under cost-of-living pressure.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Apriori</span><span>FP-Growth</span><span>Retail</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sandraotieno/Market-Basket-Analysis-using-Apriori---FP-growth" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+          <div>
+            <div class="project-title">Loan Credibility Prediction</div>
+            <div class="project-meta">Classification model · Credit risk</div>
+            <p class="project-desc">
+              Built and evaluated models to predict loan credibility based on applicant and account
+              features, comparing different algorithms and analysing feature importance for credit
+              decision support.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Scikit-Learn</span><span>Classification</span><span>Credit</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sandraotieno/Loan-Credibility-Prediction" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card">
+          <div>
+            <div class="project-title">Business Analytics Report</div>
+            <div class="project-meta">KPI analysis · Performance insights</div>
+            <p class="project-desc">
+              Conducted exploratory analysis on business KPIs, building visual summaries and
+              identifying growth, risk and optimisation opportunities for decision makers.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>EDA</span><span>Visualisation</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sandraotieno/Business-Analytics-Report" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-card">
+          <div>
+            <div class="project-title">Movie Database Analytics</div>
+            <div class="project-meta">EDA · Feature relationships · Visualisation</div>
+            <p class="project-desc">
+              Cleaned and explored movie data to understand how factors like genre, budget and
+              ratings relate to box office performance, using visual analysis and basic modelling.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>EDA</span><span>Visualisation</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sandraotieno/Movie-Database" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <!-- COPY FROM HERE TO ADD A NEW PROJECT
+        <div class="project-card">
+          <div>
+            <div class="project-title">PROJECT TITLE</div>
+            <div class="project-meta">Short meta text · domain</div>
+            <p class="project-desc">
+              Brief description of the project, what data you used, what analysis or models you
+              applied, and the type of insight or decision it supports.
+            </p>
+            <div class="project-tags">
+              <span>Tool</span><span>Method</span><span>Domain</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="GITHUB_LINK_HERE" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+        END COPY BLOCK -->
+      </div>
+    </section>
+
+    <!-- ARTICLES -->
+    <section id="articles">
+      <h2>Articles & Insight Pieces</h2>
+      <p class="section-intro">
+        Space for data-driven articles and thought pieces on consumer behaviour, retail demand,
+        analytics and decision intelligence. You can link to PDFs, Google Docs, Medium or LinkedIn posts.
+      </p>
+
+      <div class="article-item">
+        <a href="#" target="_blank"><strong>[Coming soon]</strong> Using market basket analysis to understand African consumer resilience</a>
+        <span>Analytical commentary on how cost-of-living changes shape retail baskets and brand strategy.</span>
+      </div>
+
+      <div class="article-item">
+        <a href="#" target="_blank"><strong>[Coming soon]</strong> Turning multi-country survey data into executive-ready dashboards</a>
+        <span>Practical guide on structuring, modelling and visualising data for decision makers.</span>
+      </div>
+
+      <!-- Add more article blocks here when you publish new pieces -->
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="section-intro">
+        Open to opportunities in data analytics, business intelligence, consumer insights and
+        decision-support roles, as well as consulting engagements.
+      </p>
+
+      <div class="card" style="max-width:480px;">
+        <p style="font-size:14px;">
+          📍 Nairobi, Kenya<br>
+          📧 Email: <a href="mailto:sandrabeldine@gmail.com">sandrabeldine@gmail.com</a><br>
+          🔗 LinkedIn:
+          <a href="https://www.linkedin.com/in/sandra-beldine-otieno-msc-5896a0199" target="_blank">
+            Sandra Beldine Otieno
+          </a><br>
+          💻 GitHub: <a href="https://github.com/sandraotieno" target="_blank">github.com/sandraotieno</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Sandra Beldine Otieno · Data Analytics Portfolio
+    </footer>
+  </div>
+
+  <script>
+    // set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
