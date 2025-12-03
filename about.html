@@ -25,8 +25,8 @@
       font-family: "Avenir Next", "Avenir", system-ui, -apple-system,
                    BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--accent-main);
-      line-height: 1.8;
-      font-size: 17px;
+      line-height: 1.7;
+      font-size: 15px;
       background:
         linear-gradient(rgba(2,6,23,0.90), rgba(2,6,23,0.94)),
         url("images/hero-dashboard.jpg") center center / cover no-repeat fixed;
@@ -119,16 +119,9 @@
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 36px;
       margin-bottom: 12px;
       line-height: 1.25;
-    }
-
-    .section-intro {
-      font-size: 18px;
-      color: var(--accent-soft);
-      max-width: 880px;
-      margin-bottom: 26px;
     }
 
     .two-col {
@@ -144,25 +137,25 @@
     .card {
       background: var(--bg-card);
       border-radius: var(--radius-card);
-      padding: 26px 26px 24px;
+      padding: 24px 24px 22px;
       border: 1px solid var(--card-border);
       box-shadow: var(--shadow-soft);
       backdrop-filter: blur(10px);
     }
 
     .card-title {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .muted {
       color: var(--accent-soft);
-      font-size: 17px;
+      font-size: 15px;
     }
 
     .subheading {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       margin-top: 18px;
       margin-bottom: 8px;
@@ -177,8 +170,8 @@
 
     .list-grid span {
       border-radius: 999px;
-      padding: 7px 14px;
-      font-size: 13px;
+      padding: 6px 13px;
+      font-size: 12px;
       background: #020617;
       color: #e5e7eb;
       border: 1px solid var(--border-subtle);
@@ -191,14 +184,14 @@
     }
 
     .timeline li {
-      margin-bottom: 18px;
-      font-size: 17px;
+      margin-bottom: 14px;
+      font-size: 15px;
       color: var(--accent-soft);
     }
 
     .timeline strong {
       display: block;
-      font-size: 18px;
+      font-size: 16px;
       color: var(--accent-main);
       margin-bottom: 2px;
     }
@@ -233,86 +226,80 @@
 
     <main>
       <!-- ABOUT SUMMARY -->
-<section>
-  <h1>ABOUT ME</h1>
+      <section>
+        <h1>About me</h1>
 
-  <div class="two-col">
+        <div class="two-col">
+          <!-- WHO I AM -->
+          <div class="card">
+            <div class="card-title">Who I am</div>
 
-    <!-- WHO I AM -->
-    <div class="card">
-      <div class="card-title">Who I am</div>
+            <p class="muted">
+              I am a data analytics and business intelligence professional with more than six years of
+              experience helping organisations interpret their markets, customers and performance.
+              I have worked across banking, FMCG, telecoms, retail, NGOs and development programs in
+              multiple African markets.
+            </p>
 
-      <p class="muted">
-        I am a data analytics and business intelligence professional with more than six years of 
-        experience helping organisations interpret their markets, customers and performance.
-        I have worked across banking, FMCG, telecoms, retail, NGOs and development programs in
-        multiple African markets.
-      </p>
+            <p class="muted" style="margin-top:10px;">
+              My strength lies in understanding the business context behind each question, shaping
+              practical analytical approaches and delivering outputs that leaders can trust.
+              I enjoy working closely with analysts, engineers and decision makers so that the
+              technical work always connects back to real decisions and trade offs.
+            </p>
 
-      <p class="muted" style="margin-top:10px;">
-        My strength lies in understanding the business context behind each question, shaping
-        reliable analytical approaches and delivering outputs that leaders can trust.
-        I enjoy working closely with analysts, engineers and decision makers to ensure that the
-        technical work aligns with the real decisions organisations need to make.
-      </p>
+            <p class="muted" style="margin-top:10px;">
+              I hold a Master of Science in Data Science and Analytics and a Bachelor of Economics and
+              Statistics. This combination of analytical depth and business grounding allows me to move
+              comfortably between statistical work, modelling, BI development and strategic reporting.
+            </p>
 
-      <p class="muted" style="margin-top:10px;">
-        I hold a Master of Science in Data Science and Analytics and a Bachelor of Economics and
-    Statistics. This combination of analytical skill and business grounding allows me to move 
-        comfortably between statistical work, modelling, BI development and strategic reporting.
-      </p>
+            <p class="muted" style="margin-top:10px;">
+              My focus is always on clarity, accuracy and insight that moves from data to understanding
+              to stories that leaders can use with confidence.
+            </p>
+          </div>
 
-      <p class="muted" style="margin-top:10px;">
-        My focus is always on clarity, accuracy and insight that moves from data to understanding 
-        to stories that leaders can use with confidence.
-      </p>
-    </div>
+          <!-- HOW I DO IT -->
+          <div class="card">
+            <div class="card-title">How I do it</div>
 
-    <!-- HOW I DO IT -->
-    <div class="card">
-      <div class="card-title">How I do it</div>
+            <ul class="timeline">
+              <li>
+                <strong>1. Start with data collection and structure</strong>
+                I shape survey instruments, sampling plans and structured input templates,
+                then bring together raw files from survey platforms, Excel sheets, transactional
+                systems and operational data sources.
+              </li>
 
-      <ul class="timeline">
+              <li>
+                <strong>2. Clean, prepare and validate datasets</strong>
+                I use SQL, Python, R, SPSS, Stata and Power Query to clean, reshape and validate data,
+                creating stable ELT and ETL ready tables for modelling and business intelligence.
+              </li>
 
-        <li>
-          <strong>1. Start with data collection and structure</strong>
-          I help shape survey instruments, sampling plans and structured input templates. 
-          I bring together raw files from survey platforms, Excel sheets, transactional systems 
-          and operational data sources.
-        </li>
+              <li>
+                <strong>3. Explore, analyze and model</strong>
+                I run exploratory analysis, segmentation, forecasting, classification and credit or
+                behavioural models using Pandas, PySpark, Scikit Learn, R procedures, SPSS
+                and Stata.
+              </li>
 
-        <li>
-          <strong>2. Clean, prepare and validate datasets</strong>
-          I use SQL, Python, R, SPSS, Stata and Power Query to create stable, analysis ready 
-          datasets. This includes feature creation, quality checks, merging, reshaping and 
-          preparing tables for modelling and BI.
-        </li>
+              <li>
+                <strong>4. Build BI structures and metric layers</strong>
+                I design star schemas, metric layers and ELT and ETL workflows using SQL, dbt and
+                Power Query to support dashboards and reports in Power BI, Tableau and Looker Studio.
+              </li>
 
-        <li>
-          <strong>3. Explore, analyse and model</strong>
-          I run exploratory analysis, segmentation, forecasting, classification, credit 
-          modelling, behavioural modelling and statistical testing using Pandas, Polars, 
-          PySpark, Scikit Learn, R procedures, SPSS and Stata.
-        </li>
-
-        <li>
-          <strong>4. Build BI structures and metric layers</strong>
-          I design star schemas, metric layers and ELT workflows using SQL, dbt and Power Query. 
-          These models support dashboards and reporting in Power BI, Tableau and Looker Studio.
-        </li>
-
-        <li>
-          <strong>5. Translate results into clear, decision ready stories</strong>
-          I produce visual narratives, structured summaries and executive presentations that 
-          explain what the numbers show, why the findings matter and which decisions they inform.
-        </li>
-
-      </ul>
-    </div>
-
-  </div>
-</section>
-
+              <li>
+                <strong>5. Translate results into decision ready stories</strong>
+                I develop visual narratives, concise summaries and executive presentations that
+                show what the numbers mean, why the findings matter and which decisions they support.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <!-- SKILLS & TOOLS -->
       <section>
@@ -366,8 +353,8 @@
             </p>
 
             <div class="subheading">Languages and analytics</div>
-            <div class="list-grid">
-              <span>SQL for PostgreSQL and MySQL</span>
+            <div class="list-grid ">
+              <span>SQL PostgreSQL and MySQL</span>
               <span>Python with Pandas, Polars and PySpark</span>
               <span>R for statistical modelling</span>
               <span>SPSS</span>
@@ -377,7 +364,7 @@
 
             <div class="subheading">ELT and data</div>
             <div class="list-grid">
-              <span>dbt for ELT</span>
+              <span>dbt for ELT and ETL</span>
               <span>ELT and ETL workflows</span>
               <span>Data warehousing concepts</span>
               <span>Power Query</span>
@@ -388,9 +375,8 @@
               <span>Power BI with DAX</span>
               <span>Tableau</span>
               <span>Looker Studio</span>
-              <span>Microsoft Excel</span>
-              <span>Microsoft PowerPoint</span>
-              <span>Microsoft Word</span>
+              <span>Microsoft Office Suite</span>
+        
             </div>
 
             <div class="subheading">Collaboration and versioning</div>
