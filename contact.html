@@ -7,9 +7,6 @@
 
   <style>
     :root {
-      --bg-page: #020617;
-      --bg-shell: #020617;
-      --bg-card: #020617;
       --accent-main: #f9fafb;
       --accent-soft: #9ca3af;
       --accent-primary: #60a5fa;
@@ -18,13 +15,17 @@
       --radius-card: 22px;
     }
 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      padding: 0;
-      margin: 0;
       font-family: "Avenir Next", "Avenir", system-ui, sans-serif;
-      background: radial-gradient(circle at top, #0b1120 0, #020617 50%, #000 100%);
+      background:
+        linear-gradient(rgba(2,6,23,0.90), rgba(2,6,23,0.94)),
+        url("images/hero-dashboard.jpg") center center / cover no-repeat fixed;
       color: var(--accent-main);
       line-height: 1.7;
+      font-size: 15px;
+      min-height: 100vh;
     }
 
     a { text-decoration: none; color: var(--accent-primary); }
@@ -32,92 +33,137 @@
 
     /* Layout container */
     .page-shell {
-      max-width: 1150px;
-      margin: 36px auto 70px;
-      padding: 32px 28px;
-      background:
-        radial-gradient(circle at top left, rgba(37,99,235,0.25), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(56,189,248,0.25), transparent 60%),
-        var(--bg-shell);
-      border-radius: 30px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(148,163,184,0.3);
+      max-width: 1280px;
+      margin: 22px auto 60px;
+      padding: 22px 30px 40px;
     }
 
     /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 40px;
-      gap: 24px;
+      align-items: center;
+      margin-bottom: 36px;
+      gap: 20px;
     }
 
-    .brand-wrapper { display: flex; flex-direction: column; gap: 4px; }
-    .brand-tagline {
-      color: var(--accent-soft);
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+    .brand-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    .brand {
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      background: radial-gradient(circle at top left, rgba(96,165,250,0.75), #020617);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.85);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .brand-name {
       font-size: 22px;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      margin-top: 4px;
+    }
+
+    .brand-tagline {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
     }
 
     nav a {
       margin-left: 24px;
-      font-size: 14px;
+      font-size: 15px;
       color: var(--accent-soft);
     }
 
     nav a:hover { color: var(--accent-primary); }
 
     @media(max-width: 900px) {
-      header { flex-direction: column; }
-      nav { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 12px; }
-      nav a { margin: 0; }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      nav a { margin-left: 0; }
     }
 
     /* MAIN CONTENT */
 
     h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .contact-intro {
+      max-width: 780px;
+      color: var(--accent-soft);
+      margin-bottom: 25px;
+      font-size: 15px;
     }
 
     .contact-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
       gap: 28px;
-      margin-top: 25px;
+      margin-top: 10px;
     }
 
     @media(max-width: 850px) {
       .contact-layout { grid-template-columns: 1fr; }
     }
 
-    /* LEFT CARD (info + counters) */
+    /* LEFT CARD (info) */
 
     .card {
-      background: var(--bg-card);
-      padding: 22px;
+      background: rgba(15,23,42,0.95);
+      padding: 22px 22px 20px;
       border-radius: var(--radius-card);
       border: 1px solid var(--border-subtle);
       box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 14.5px;
+      color: var(--accent-soft);
+      margin-bottom: 16px;
     }
 
     .info-list {
       list-style: none;
       padding: 0;
-      margin: 0 0 20px;
+      margin: 0;
     }
 
     .info-list li {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       font-size: 14px;
       display: flex;
       align-items: center;
@@ -128,36 +174,25 @@
       font-size: 18px;
     }
 
-    /* View counters */
-
-    .view-counter {
-      margin-top: 12px;
-      font-size: 13px;
-      color: var(--accent-soft);
-    }
-
-    .view-counter-embed {
-      margin-top: 8px;
-      font-size: 11px;
-      min-height: 50px; /* ensures space for your freecounterstat widget */
-    }
-
     /* RIGHT CARD (form) */
 
     form {
       display: flex;
       flex-direction: column;
       gap: 14px;
-      background: var(--bg-card);
-      padding: 22px;
+      background: rgba(15,23,42,0.95);
+      padding: 22px 22px 20px;
       border-radius: var(--radius-card);
       border: 1px solid var(--border-subtle);
       box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
     }
 
     label {
       font-size: 13px;
       color: var(--accent-soft);
+      display: block;
+      margin-bottom: 4px;
     }
 
     input, textarea {
@@ -180,7 +215,7 @@
       padding: 12px;
       border-radius: 12px;
       cursor: pointer;
-      margin-top: 10px;
+      margin-top: 6px;
     }
 
     button:hover {
@@ -188,7 +223,7 @@
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 34px;
       text-align: center;
       font-size: 12px;
       color: var(--accent-soft);
@@ -197,103 +232,90 @@
 </head>
 
 <body>
+  <div class="page-shell">
 
-<div class="page-shell">
-
-  <!-- HEADER -->
-  <header>
-    <div class="brand-wrapper">
-      <div class="brand-tagline">DATA ANALYTICS PORTFOLIO</div>
-      <div class="brand">SANDRA B. OTIENO</div>
-    </div>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <h1>Contact</h1>
-    <p style="max-width: 700px; color: var(--accent-soft); margin-bottom: 25px;">
-      Feel free to reach out about analytics, business intelligence, dashboards, insight generation,
-      or collaboration opportunities.
-    </p>
-
-    <div class="contact-layout">
-
-      <!-- LEFT CONTACT CARD -->
-      <div class="card">
-
-        <ul class="info-list">
-          <li><span class="icon">📍</span> Nairobi, Kenya</li>
-          <li><span class="icon">📧</span> <a href="mailto:sandraotieno28@gmail.com">sandraotieno28@gmail.com</a></li>
-          <li><span class="icon">📞</span> <a href="tel:+254740495262">+254 740 495 262</a></li>
-          <li><span class="icon">🔗</span> <a target="_blank" href="https://www.linkedin.com/in/sandrabeldine">LinkedIn</a></li>
-          <li><span class="icon">💻</span> <a target="_blank" href="https://github.com/sandraotieno">GitHub</a></li>
-        </ul>
-
-        <!-- NUMERIC COUNTER -->
-<div class="view-counter">
-  <span id="view-counter-text"></span>
-</div>
-
-<!-- FREECOUNTERSTAT WIDGET -->
-<div class="view-counter-embed">
-
-  <!-- FreeCounterStat -->
-  <script type="text/javascript" src="//counter.websiteout.com/js/29/0/0/1"></script>
-  <noscript>
-    <a href="https://www.freecounterstat.com" title="hit counter">
-      <img src="//counter.websiteout.com/hit.php?id=29&nd=0&style=0" alt="hit counter"/>
-    </a>
-  </noscript>
-
-</div>
-
+    <!-- HEADER -->
+    <header>
+      <div class="brand-wrapper">
+        <div class="logo-mark">SO</div>
+        <div class="brand-text">
+          <div class="brand-name">SANDRA BELDINE</div>
+          <div class="brand-tagline">PORTFOLIO</div>
+        </div>
       </div>
 
-      <!-- RIGHT FORM CARD -->
-      <form>
-        <div>
-          <label for="name">Name</label>
-          <input id="name" type="text" placeholder="Your name" required />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" style="color: var(--accent-primary);">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact</h1>
+      <p class="contact-intro">
+        If you would like to talk about analytics, dashboards, insight work or potential collaboration,
+        you can reach me directly using the details below or send a short message through the form.
+      </p>
+
+      <div class="contact-layout">
+        <!-- LEFT CONTACT CARD -->
+        <div class="card">
+          <div class="card-title">Get in touch</div>
+          <p class="card-text">
+            I am based in Nairobi and open to remote, hybrid or project-based work across Africa and beyond.
+          </p>
+
+          <ul class="info-list">
+            <li><span class="icon">📍</span> Nairobi, Kenya</li>
+            <li>
+              <span class="icon">📧</span>
+              <a href="mailto:sandrabeldine@gmail.com">sandrabeldine@gmail.com</a>
+            </li>
+            <li>
+              <span class="icon">📞</span>
+              <a href="tel:+254740495262">+254 740 495 262</a>
+            </li>
+            <li>
+              <span class="icon">🔗</span>
+              <a target="_blank" href="https://www.linkedin.com/in/sandra-beldine-otieno-msc-5896a0199/">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <span class="icon">💻</span>
+              <a target="_blank" href="https://github.com/sandraotieno">GitHub</a>
+            </li>
+          </ul>
         </div>
 
-        <div>
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="Your email" required />
-        </div>
+        <!-- RIGHT FORM CARD -->
+        <form>
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" required />
+          </div>
 
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Write your message..." required></textarea>
-        </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Your email" required />
+          </div>
 
-        <button type="submit">Send Message</button>
-      </form>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write your message..." required></textarea>
+          </div>
 
-    </div>
-  </main>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </main>
 
-  <footer>
-    © 2024 Sandra Beldine Otieno · Data Analytics Portfolio
-  </footer>
-
-</div>
-
-<!-- SCRIPT: simple numeric counter -->
-<script>
-  fetch('https://api.countapi.xyz/hit/sandraotieno-portfolio/contact')
-    .then(r => r.json())
-    .then(data => {
-      const vc = document.getElementById('view-counter-text');
-      if (vc && data.value !== undefined) vc.textContent = data.value;
-    })
-    .catch(() => {});
-</script>
-
+    <footer>
+      © 2025 Sandra Beldine Otieno · Portfolio
+    </footer>
+  </div>
 </body>
 </html>
+
