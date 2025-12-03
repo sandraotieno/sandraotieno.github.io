@@ -16,7 +16,7 @@
       --accent-bi: rgba(96,165,250,0.18);
       --accent-insight: rgba(250,204,21,0.18);
       --border-subtle: rgba(148,163,184,0.35);
-      --radius-card: 22px;
+      --radius-card: 26px;
       --shadow-soft: 0 32px 70px rgba(0,0,0,0.85);
     }
 
@@ -172,26 +172,28 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 260px;
+      min-height: 320px;
       overflow: hidden;
+      font-size: 1.05rem;
     }
 
     .capability-inner {
-      padding: 22px 22px 16px;
+      padding: 26px 26px 18px;
+      margin-bottom: 4px;
     }
 
     .capability-header {
       display: flex;
       align-items: center;
       gap: 12px;
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .capability-icon-wrap {
-      width: 56px;
-      height: 56px;
+      width: 60px;
+      height: 60px;
       border-radius: 999px;
       border: 1px solid rgba(156,163,175,0.8);
       display: flex;
@@ -202,30 +204,32 @@
     }
 
     .capability-icon {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
     }
 
     .capability-desc {
-      font-size: 13.5px;
+      font-size: 15px;
+      line-height: 1.7;
       color: var(--accent-soft);
+      margin-top: 6px;
     }
 
     /* TOOLS BAR */
 
     .capability-tools-bar {
-      font-size: 13px;
-      padding: 10px 18px 11px;
+      font-size: 14px;
+      padding: 12px 22px 14px;
       border-top: 1px solid rgba(31,41,55,0.9);
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
       align-items: baseline;
     }
 
     .capability-tools-label {
       text-transform: uppercase;
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 0.12em;
       color: #e5e7eb;
       font-weight: 600;
@@ -233,10 +237,10 @@
     }
 
     .tool-pill {
-      padding: 3px 9px;
+      padding: 6px 12px;
       border-radius: 999px;
       border: 1px solid rgba(148,163,184,0.6);
-      font-size: 11.2px;
+      font-size: 12.5px;
       color: #e5e7eb;
       background: rgba(15,23,42,0.9);
     }
@@ -272,9 +276,8 @@
       <div class="brand-wrapper">
         <div class="logo-mark">SO</div>
         <div class="brand-text">
-          <div class="brand-name">SANDRA OTIENO</h1> 
-          </div>
-          <div class="brand-tagline"> PORTFOLIO</div>
+          <div class="brand-name">SANDRA OTIENO</div>
+          <div class="brand-tagline">PORTFOLIO</div>
         </div>
       </div>
 
@@ -289,7 +292,6 @@
     <!-- MAIN -->
     <main>
       <div class="hero-content">
-       
         <p class="hero-subtitle">
           I design and deliver analytics, Business Intelligence and insight solutions that move from raw
           data and survey files to clear, executive-ready stories for decision-makers.
@@ -310,11 +312,9 @@
                 <span>Data Analytics</span>
               </div>
               <p class="capability-desc">
-                Data analytics is the systematic exploration of raw data using statistical methods, coding
-                and algorithmic techniques to uncover trends, patterns and relationships. It transforms
-                datasets into measurable evidence that explains what happened, why it happened and what is
-                likely to happen next. It spans descriptive, diagnostic, predictive and prescriptive analysis,
-                enabling teams to quantify behaviour, model scenarios and support data-driven actions.
+                Data analytics involves exploring and processing raw data to uncover patterns, trends and insights.
+                It explains what happened, why it happened and what is likely next through descriptive, diagnostic,
+                predictive and prescriptive analysis.
               </p>
             </div>
             <div class="capability-tools-bar">
@@ -348,11 +348,9 @@
                 <span>Business Intelligence</span>
               </div>
               <p class="capability-desc">
-                Business intelligence is the development of integrated data systems, dashboards and
-                reporting pipelines that convert complex organisational data into consistent, real-time
-                visibility. It focuses on building reliable data infrastructure, automated metrics,
-                standardised KPIs and interactive visual tools that help teams monitor performance,
-                identify deviations and align decisions with business goals.
+                Business intelligence builds systems, dashboards and reporting pipelines that turn organisational
+                data into real-time visibility. It ensures consistent KPIs, automated metrics and clear dashboards
+                that drive performance monitoring and decision support.
               </p>
             </div>
             <div class="capability-tools-bar">
@@ -383,11 +381,9 @@
                 <span>Insight Generation</span>
               </div>
               <p class="capability-desc">
-                Insight generation is the interpretation stage where analytical findings are translated into
-                meaning, narratives and strategic recommendations. It goes beyond numbers to explain
-                implications, opportunities, risks and human-centred drivers behind the data. It connects
-                patterns to real-world behaviour, synthesises evidence into stories and offers actionable
-                guidance that influences decisions, innovation and business strategy.
+                Insight generation interprets analytical results to create meaning, narratives and recommendations.
+                It connects data patterns to real behaviour and turns evidence into clear, actionable guidance for
+                strategy and decision making.
               </p>
             </div>
             <div class="capability-tools-bar">
