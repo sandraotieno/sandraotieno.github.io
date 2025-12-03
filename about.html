@@ -25,8 +25,8 @@
       font-family: "Avenir Next", "Avenir", system-ui, -apple-system,
                    BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--accent-main);
-      line-height: 1.7;
-      font-size: 15px;
+      line-height: 1.8;
+      font-size: 17px;
       background:
         linear-gradient(rgba(2,6,23,0.90), rgba(2,6,23,0.94)),
         url("images/hero-dashboard.jpg") center center / cover no-repeat fixed;
@@ -119,21 +119,22 @@
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+      font-size: 40px;
+      margin-bottom: 12px;
+      line-height: 1.25;
     }
 
     .section-intro {
-      font-size: 15px;
+      font-size: 18px;
       color: var(--accent-soft);
       max-width: 880px;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
 
     .two-col {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
-      gap: 24px;
+      gap: 26px;
     }
 
     @media (max-width: 900px) {
@@ -143,28 +144,28 @@
     .card {
       background: var(--bg-card);
       border-radius: var(--radius-card);
-      padding: 22px 22px 20px;
+      padding: 26px 26px 24px;
       border: 1px solid var(--card-border);
       box-shadow: var(--shadow-soft);
       backdrop-filter: blur(10px);
     }
 
     .card-title {
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 10px;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
 
     .muted {
       color: var(--accent-soft);
-      font-size: 14.5px;
+      font-size: 17px;
     }
 
     .subheading {
-      font-size: 13px;
-      font-weight: 600;
-      margin-top: 16px;
-      margin-bottom: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 18px;
+      margin-bottom: 8px;
     }
 
     .list-grid {
@@ -176,8 +177,8 @@
 
     .list-grid span {
       border-radius: 999px;
-      padding: 5px 11px;
-      font-size: 11px;
+      padding: 7px 14px;
+      font-size: 13px;
       background: #020617;
       color: #e5e7eb;
       border: 1px solid var(--border-subtle);
@@ -190,13 +191,16 @@
     }
 
     .timeline li {
-      margin-bottom: 12px;
-      font-size: 13.5px;
+      margin-bottom: 18px;
+      font-size: 17px;
       color: var(--accent-soft);
     }
 
     .timeline strong {
+      display: block;
+      font-size: 18px;
       color: var(--accent-main);
+      margin-bottom: 2px;
     }
 
     footer {
@@ -229,143 +233,138 @@
 
     <main>
       <!-- ABOUT SUMMARY -->
-<section>
-  <!-- TAGLINE -->
-  <h1>From raw data to meaningful, decision-ready stories</h1>
-  <p class="section-intro">
-    I work across the full analytical process, from how data is collected and prepared
-    to how it is modelled, visualised and communicated in a way that supports sound,
-    confident decision making.
-  </p>
+      <section>
+        <h1>From raw data to meaningful, decision ready stories</h1>
+        <p class="section-intro">
+          I work along the full data journey, connecting how information is collected, structured,
+          analysed and shared so that teams can make decisions with clarity and confidence.
+        </p>
 
-  <div class="two-col">
+        <div class="two-col">
+          <!-- WHO I AM -->
+          <div class="card">
+            <div class="card-title">Who I am</div>
+            <p class="muted">
+              I am a data analytics and business intelligence professional with more than six years
+              of experience helping organisations understand their customers, markets and performance.
+              My work spans banking, FMCG, telecoms, retail, NGOs and development programs across
+              several African markets.
+            </p>
+            <p class="muted" style="margin-top:10px;">
+              I combine technical skills with a strong sense of business context. I listen carefully
+              to the questions leaders are asking, work with data teams to structure the right inputs
+              and then deliver outputs that are accurate, practical and easy to interpret. My focus
+              is always on insight that is grounded in evidence and ready for action.
+            </p>
+          </div>
 
-    <!-- WHO I AM -->
-    <div class="card">
-      <div class="card-title">Who I am</div>
-      <p class="muted">
-        I am a data analytics and business intelligence professional with more than
-        six years of experience translating raw information into insight that guides
-        commercial, operational and strategic decisions. My experience spans banking,
-        FMCG, telecoms, retail, NGOs and development programs across African markets.
-      </p>
-      <p class="muted" style="margin-top:10px;">
-        I bring together technical skill and business understanding. I interpret
-        questions from stakeholders, work with analysts and engineers to shape the
-        right data foundations and deliver outputs that leaders can trust. My approach
-        centres on clarity, accuracy and stories that highlight what matters and why.
-      </p>
-    </div>
-
-    <!-- WHAT I DO -->
-    <div class="card">
-      <div class="card-title">What I do</div>
-
-      <p class="muted">
-        I support the complete analytics lifecycle beginning with the design of survey
-        instruments and structured data collection. I clean, validate and prepare raw
-        data using SQL, Python, R, SPSS, Stata and Power Query to create reliable,
-        analysis-ready datasets.
-      </p>
-
-      <p class="muted" style="margin-top:10px;">
-        I explore and model data using statistical analysis, segmentation,
-        forecasting, classification and behavioural modelling. I apply tools such as
-        Pandas, Polars, PySpark, Scikit-Learn and statistical procedures across R,
-        SPSS and Stata to quantify relationships and uncover patterns that matter.
-      </p>
-
-      <p class="muted" style="margin-top:10px;">
-        I build BI-ready data structures using SQL, Power Query and dbt, then design
-        dashboards and performance views in Power BI, Tableau and Looker Studio.
-        My work focuses on clear KPIs, intuitive layouts and metrics that reflect
-        how organisations operate.
-      </p>
-
-      <p class="muted" style="margin-top:10px;">
-        I bring everything together through concise narratives, visual stories and
-        executive summaries that explain what the numbers mean, why the results
-        matter and which decisions they support. My goal is always insight that moves
-        from data to understanding to stories that lead to action.
-      </p>
-
-    </div>
-
-  </div>
-</section>
+          <!-- HOW I DO IT -->
+          <div class="card">
+            <div class="card-title">How I do it</div>
+            <ul class="timeline">
+              <li>
+                <strong>Start with collection and structure</strong>
+                I help shape survey instruments and data collection plans and bring together raw files
+                from survey platforms, Excel workbooks, transactional systems and other operational sources.
+              </li>
+              <li>
+                <strong>Clean, prepare and combine data</strong>
+                I use SQL, Python, R, SPSS, Stata and Power Query to clean, validate and merge datasets,
+                create features and build stable tables that are ready for analysis and reporting.
+              </li>
+              <li>
+                <strong>Explore, analyse and model</strong>
+                I apply statistical analysis, segmentation, forecasting, classification and risk
+                modelling using tools such as Pandas, Polars, PySpark and Scikit Learn together with
+                procedures in R, SPSS and Stata.
+              </li>
+              <li>
+                <strong>Build models for business intelligence</strong>
+                I design metric layers, star schemas and other data models using SQL, dbt and Power Query
+                that support dashboards and monitoring in Power BI, Tableau and Looker Studio.
+              </li>
+              <li>
+                <strong>Translate results into stories</strong>
+                I bring everything together in clear visuals, written summaries and executive presentations
+                that explain what the numbers show, why the findings matter and which decisions they can guide.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <!-- SKILLS & TOOLS -->
       <section>
         <div class="two-col">
-          <!-- WHAT I DO (now includes survey/raw data) -->
+          <!-- WHAT I DO -->
           <div class="card">
             <div class="card-title">What I do</div>
             <p class="muted">
-              My work starts with how data is captured and flows all the way to the final report – from survey
-              design and raw files, through modelling and BI, to the insight story that informs strategy.
+              My work covers the full analytical lifecycle, from initial design and data collection
+              through modelling and business intelligence to final reporting and communication.
             </p>
 
-            <div class="subheading">Analytics</div>
+            <div class="subheading">Analytics and insight</div>
             <div class="list-grid">
-              <span>Survey Design &amp; Data Collection</span>
-              <span>Raw Data Cleaning &amp; Preparation</span>
-              <span>Exploratory &amp; Statistical Analysis</span>
-              <span>Segmentation &amp; Behavioural Analytics</span>
-              <span>Forecasting &amp; Time Series</span>
-              <span>Credit &amp; Risk Analytics</span>
-              <span>Financial Performance Analysis</span>
-              <span>Survey &amp; Panel Data Analysis</span>
+              <span>Survey design and data collection</span>
+              <span>Raw data cleaning and preparation</span>
+              <span>Exploratory and statistical analysis</span>
+              <span>Segmentation and behavioural analytics</span>
+              <span>Forecasting and time series</span>
+              <span>Credit and risk analytics</span>
+              <span>Financial performance analysis</span>
+              <span>Survey and panel data analysis</span>
             </div>
 
-            <div class="subheading">Business Intelligence &amp; Data Modelling</div>
+            <div class="subheading">Business intelligence and modelling</div>
             <div class="list-grid">
-              <span>ELT / ETL Pipelines</span>
-              <span>Data Modelling for BI</span>
-              <span>Metric &amp; KPI Design</span>
-              <span>Dashboard Wireframing</span>
-              <span>Interactive Reports &amp; Drill-downs</span>
-              <span>Performance Monitoring Views</span>
+              <span>ELT and ETL workflows</span>
+              <span>Data modelling for BI</span>
+              <span>Metric and KPI design</span>
+              <span>Dashboard layout and wireframing</span>
+              <span>Interactive reports and drill downs</span>
+              <span>Performance monitoring views</span>
             </div>
 
-            <div class="subheading">Insight &amp; Communication</div>
+            <div class="subheading">Communication and reporting</div>
             <div class="list-grid">
-              <span>Insight Generation</span>
-              <span>Executive Summary Writing</span>
-              <span>Slide &amp; Storyline Design</span>
-              <span>Scenario &amp; “What-if” Framing</span>
-              <span>Audience-specific Reporting</span>
+              <span>Insight generation</span>
+              <span>Executive summary writing</span>
+              <span>Slide and storyline development</span>
+              <span>Scenario and what if framing</span>
+              <span>Audience specific reporting</span>
             </div>
           </div>
 
           <!-- TOOLS -->
           <div class="card">
-            <div class="card-title">Tools &amp; Platforms</div>
+            <div class="card-title">Tools and platforms</div>
             <p class="muted">
-              I work across analytics, BI and data engineering–adjacent tools to keep pipelines and outputs
-              reliable from source to final report.
+              I work across analytics, business intelligence and data engineering related tools
+              to keep the pipeline from source data to final story reliable and repeatable.
             </p>
 
-            <div class="subheading">Languages &amp; Analytics</div>
+            <div class="subheading">Languages and analytics</div>
             <div class="list-grid">
-              <span>SQL (PostgreSQL, MySQL)</span>
-              <span>Python (Pandas, Polars, PySpark)</span>
-              <span>R</span>
+              <span>SQL for PostgreSQL and MySQL</span>
+              <span>Python with Pandas, Polars and PySpark</span>
+              <span>R for statistical modelling</span>
               <span>SPSS</span>
               <span>Stata</span>
               <span>Jupyter Notebook</span>
             </div>
 
-            <div class="subheading">ELT / ETL &amp; Data</div>
+            <div class="subheading">ELT and data</div>
             <div class="list-grid">
-              <span>dbt (ELT)</span>
-              <span>ELT / ETL Workflows</span>
-              <span>Data Warehousing</span>
+              <span>dbt for ELT</span>
+              <span>ELT and ETL workflows</span>
+              <span>Data warehousing concepts</span>
               <span>Power Query</span>
             </div>
 
-            <div class="subheading">Business Intelligence &amp; Reporting</div>
+            <div class="subheading">Business intelligence and reporting</div>
             <div class="list-grid">
-              <span>Power BI (DAX)</span>
+              <span>Power BI with DAX</span>
               <span>Tableau</span>
               <span>Looker Studio</span>
               <span>Microsoft Excel</span>
@@ -373,10 +372,10 @@
               <span>Microsoft Word</span>
             </div>
 
-            <div class="subheading">Collaboration &amp; Versioning</div>
+            <div class="subheading">Collaboration and versioning</div>
             <div class="list-grid">
-              <span>Git &amp; GitHub</span>
-              <span>Documentation &amp; Templates</span>
+              <span>Git and GitHub</span>
+              <span>Documentation and templates</span>
             </div>
           </div>
         </div>
