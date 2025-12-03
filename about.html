@@ -25,8 +25,8 @@
       font-family: "Avenir Next", "Avenir", system-ui, -apple-system,
                    BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--accent-main);
-      line-height: 1.7;
-      font-size: 15px;
+      line-height: 1.75;
+      font-size: 16px;
       background:
         linear-gradient(rgba(2,6,23,0.90), rgba(2,6,23,0.94)),
         url("images/hero-dashboard.jpg") center center / cover no-repeat fixed;
@@ -119,9 +119,16 @@
     }
 
     h1 {
-      font-size: 36px;
-      margin-bottom: 12px;
+      font-size: 34px;
+      margin-bottom: 14px;
       line-height: 1.25;
+    }
+
+    .section-intro {
+      font-size: 17px;
+      color: var(--accent-soft);
+      max-width: 880px;
+      margin-bottom: 26px;
     }
 
     .two-col {
@@ -151,30 +158,31 @@
 
     .muted {
       color: var(--accent-soft);
-      font-size: 15px;
+      font-size: 15.5px;
     }
 
     .subheading {
       font-size: 15px;
       font-weight: 700;
-      margin-top: 18px;
-      margin-bottom: 8px;
+      margin-top: 16px;
+      margin-bottom: 6px;
     }
 
     .list-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
       margin-top: 4px;
     }
 
     .list-grid span {
       border-radius: 999px;
-      padding: 6px 13px;
+      padding: 5px 11px;
       font-size: 12px;
       background: #020617;
       color: #e5e7eb;
       border: 1px solid var(--border-subtle);
+      white-space: nowrap;
     }
 
     .timeline {
@@ -185,7 +193,7 @@
 
     .timeline li {
       margin-bottom: 14px;
-      font-size: 15px;
+      font-size: 15.5px;
       color: var(--accent-soft);
     }
 
@@ -235,28 +243,28 @@
             <div class="card-title">Who I am</div>
 
             <p class="muted">
-              I am a data analytics and business intelligence professional with more than six years of
-              experience helping organisations interpret their markets, customers and performance.
+              I am a data analytics and business intelligence professional with more than six years
+              of experience helping organisations interpret their markets, customers and performance.
               I have worked across banking, FMCG, telecoms, retail, NGOs and development programs in
               multiple African markets.
             </p>
 
             <p class="muted" style="margin-top:10px;">
-              My strength lies in understanding the business context behind each question, shaping
-              practical analytical approaches and delivering outputs that leaders can trust.
-              I enjoy working closely with analysts, engineers and decision makers so that the
-              technical work always connects back to real decisions and trade offs.
+              My strength is understanding the business context behind each question and shaping
+              analytical approaches that decision makers can trust. I like working with analysts,
+              engineers and leadership teams so that the technical work always connects back to real
+              trade offs and choices.
             </p>
 
             <p class="muted" style="margin-top:10px;">
               I hold a Master of Science in Data Science and Analytics and a Bachelor of Economics and
-              Statistics. This combination of analytical depth and business grounding allows me to move
+              Statistics. This mix of analytical depth and business grounding allows me to move
               comfortably between statistical work, modelling, BI development and strategic reporting.
             </p>
 
             <p class="muted" style="margin-top:10px;">
-              My focus is always on clarity, accuracy and insight that moves from data to understanding
-              to stories that leaders can use with confidence.
+              My focus is on clarity, accuracy and insight that moves from data to understanding to
+              stories that leaders can act on with confidence.
             </p>
           </div>
 
@@ -266,35 +274,34 @@
 
             <ul class="timeline">
               <li>
-                <strong>1. Start with data collection and structure</strong>
-                I shape survey instruments, sampling plans and structured input templates,
-                then bring together raw files from survey platforms, Excel sheets, transactional
-                systems and operational data sources.
+                <strong>1. Shape data collection and structure</strong>
+                I design or refine survey instruments, sampling plans and input templates, and map how
+                data should land in tables so that later analysis is straightforward.
               </li>
 
               <li>
-                <strong>2. Clean, prepare and validate datasets</strong>
-                I use SQL, Python, R, SPSS, Stata and Power Query to clean, reshape and validate data,
-                creating stable ELT and ETL ready tables for modelling and business intelligence.
+                <strong>2. Clean, prepare and validate data</strong>
+                I use SQL, Python, R and spreadsheet tools to clean, join and check data, creating
+                stable ELT and ETL outputs that are ready for modelling and BI.
               </li>
 
               <li>
-                <strong>3. Explore, analyze and model</strong>
-                I run exploratory analysis, segmentation, forecasting, classification and credit or
-                behavioural models using Pandas, PySpark, Scikit Learn, R procedures, SPSS
-                and Stata.
+                <strong>3. Explore and model</strong>
+                I run exploratory analysis and build statistical and machine learning models for
+                segmentation, forecasting, classification, credit and behavioural questions.
               </li>
 
               <li>
                 <strong>4. Build BI structures and metric layers</strong>
-                I design star schemas, metric layers and ELT and ETL workflows using SQL, dbt and
-                Power Query to support dashboards and reports in Power BI, Tableau and Looker Studio.
+                I design star schemas, metric layers and ELT / ETL workflows with SQL, dbt and Power
+                Query, supporting dashboards and reports in Power BI, Tableau and Looker Studio.
               </li>
 
               <li>
-                <strong>5. Translate results into decision ready stories</strong>
-                I develop visual narratives, concise summaries and executive presentations that
-                show what the numbers mean, why the findings matter and which decisions they support.
+                <strong>5. Tell the story</strong>
+                I translate results into visual narratives, concise summaries and executive
+                presentations that explain what the numbers show, why they matter and which decisions
+                they support.
               </li>
             </ul>
           </div>
@@ -308,8 +315,8 @@
           <div class="card">
             <div class="card-title">What I do</div>
             <p class="muted">
-              My work covers the full analytical lifecycle, from initial design and data collection
-              through modelling and business intelligence to final reporting and communication.
+              My work covers the analytical lifecycle, from how information is collected and stored
+              through modelling and BI to the insight story that reaches decision makers.
             </p>
 
             <div class="subheading">Analytics and insight</div>
@@ -348,35 +355,36 @@
           <div class="card">
             <div class="card-title">Tools and platforms</div>
             <p class="muted">
-              I work across analytics, business intelligence and data engineering related tools
-              to keep the pipeline from source data to final story reliable and repeatable.
+              I work across analytics, business intelligence and data engineering related tools to
+              keep the pipeline from source data to final story reliable and repeatable.
             </p>
 
             <div class="subheading">Languages and analytics</div>
-            <div class="list-grid ">
-              <span>SQL (PostgreSQL and MySQL)</span>
-              <span>Python (Pandas, Polars and PySpark)</span>
-              <span>R </span>
+            <div class="list-grid">
+              <span>SQL for PostgreSQL and MySQL</span>
+              <span>Python with Pandas, Polars and PySpark</span>
+              <span>R for statistical modelling</span>
               <span>SPSS</span>
               <span>Stata</span>
-             
+              <span>Jupyter Notebook</span>
             </div>
 
             <div class="subheading">ELT and data</div>
             <div class="list-grid">
-              <span>dbt for ELT </span>
-              <span>ELT/ETL workflows</span>
+              <span>dbt for ELT</span>
+              <span>ELT and ETL workflows</span>
               <span>Data warehousing concepts</span>
               <span>Power Query</span>
             </div>
 
             <div class="subheading">Business intelligence and reporting</div>
             <div class="list-grid">
-              <span>Power BI (DAX)</span>
+              <span>Power BI with DAX</span>
               <span>Tableau</span>
               <span>Looker Studio</span>
-              <span>Microsoft Office Suite</span>
-        
+              <span>Microsoft Excel</span>
+              <span>Microsoft PowerPoint</span>
+              <span>Microsoft Word</span>
             </div>
 
             <div class="subheading">Collaboration and versioning</div>
