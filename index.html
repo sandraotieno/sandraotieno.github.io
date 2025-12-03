@@ -74,29 +74,29 @@
     }
 
     .brand {
-  font-size: 20px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent-main);
-  margin-bottom: 10px;   /* space under your name */
-}
+      font-size: 20px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-main);
+      margin-bottom: 10px; /* space under your name */
+    }
 
-.hero-title {
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  color: var(--accent-primary);
-}
+    .hero-title {
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      color: var(--accent-primary);
+    }
 
-.hero-desc {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--accent-soft);
-  max-width: 720px;
-  margin-top: 6px;
-}
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--accent-soft);
+      max-width: 720px;
+      margin-top: 6px;
+    }
 
     .nav-links a {
       margin-left: 22px;
@@ -162,31 +162,30 @@
       display: grid;
       grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
       gap: 32px;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 48px;
     }
 
-@media (max-width: 900px) {
-  #home {
-    grid-template-columns: 1fr;
-  }
-  .hero-visual {
-    margin-top: 0;
-  }
-}
+    .home-left {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
 
-    .hero-text {
-      font-size: 14px;
-      color: var(--accent-soft);
-      margin-bottom: 20px;
-      max-width: 95%;
+    @media (max-width: 900px) {
+      #home {
+        grid-template-columns: 1fr;
+      }
+      .hero-visual {
+        margin-top: 16px;
+      }
     }
 
     .hero-pill-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 18px;
+      margin-bottom: 2px;
     }
 
     .hero-pill {
@@ -202,7 +201,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 10px;
-      margin-bottom: 16px;
+      margin-bottom: 4px;
     }
 
     .hero-highlight {
@@ -222,7 +221,7 @@
     }
 
     .flow-block {
-      margin-top: 10px;
+      margin-top: 6px;
       padding: 14px;
       background: rgba(15,23,42,0.9);
       border-radius: 14px;
@@ -240,10 +239,10 @@
       color: var(--accent-main);
     }
 
- .hero-visual {
-  position: relative;
-  margin-top: -14px;   /* nudge image upwards on desktop */
-}
+    .hero-visual {
+      position: relative;
+      margin-top: -8px; /* nudge image up on desktop */
+    }
 
     .hero-visual img {
       width: 100%;
@@ -436,6 +435,12 @@
       fill: #e5e7eb;
     }
 
+    .contact-intro {
+      font-size: 13px;
+      color: var(--accent-soft);
+      margin-bottom: 12px;
+    }
+
     .contact-form label {
       display: block;
       font-size: 12px;
@@ -502,7 +507,7 @@
           <span id="heroWord">Data Analytics</span>
         </h1>
         <p id="heroDesc" class="hero-desc">
-          Data analytics is the systematic exploration of raw data using statistical methods, coding, and algorithmic techniques to uncover trends, patterns, and relationships. It transforms large and small datasets into measurable evidence that explains what happened, why it happened, and what is likely to happen next.
+          Data analytics is the systematic exploration of raw data using statistical methods, coding, and algorithmic techniques to uncover trends, patterns, and relationships. It transforms large and small datasets into measurable evidence that explains what happened, why it happened, and what is likely to happen next. Data analytics spans descriptive, diagnostic, predictive, and prescriptive analysis, enabling teams to quantify behaviour, model scenarios, and support data-driven actions across products, operations, and strategy.
         </p>
       </div>
 
@@ -516,35 +521,35 @@
 
     <!-- HOME -->
     <section id="home">
-      <div>
-     <p class="hero-text">
-  This portfolio showcases selected projects for banks, FMCG, retail and development organisations –
-  from cleaning and modelling data to building dashboards and presenting decision-ready stories.
-</p>
+      <div class="home-left">
+        <div class="hero-pill-row">
+          <span class="hero-pill">Data Analytics</span>
+          <span class="hero-pill">Business Intelligence</span>
+          <span class="hero-pill">Insight Generation</span>
+        </div>
 
- <div class="flow-block">
-          <h2>How They Flow Together</h2>
+        <div class="hero-highlight-grid">
+          <div class="hero-highlight">
+            <strong>Data Analytics · Tools</strong>
+            Python, R, SQL, SPSS, Stata, Jupyter Notebook.
+          </div>
+          <div class="hero-highlight">
+            <strong>Business Intelligence · Tools</strong>
+            Power BI, Tableau, Looker Studio, DAX, Power Query.
+          </div>
+          <div class="hero-highlight">
+            <strong>Insight Generation · Tools</strong>
+            Excel, PowerPoint, survey analysis frameworks and reporting templates for executive decks and PDFs.
+          </div>
+        </div>
+
+        <div class="flow-block">
+          <h3>How They Flow Together</h3>
           <p><strong>Data Analytics</strong> → produces evidence and patterns.</p>
           <p><strong>Business Intelligence</strong> → builds systems and tools for consistent visibility.</p>
           <p><strong>Insight Generation</strong> → transforms evidence into strategic meaning.</p>
         </div>
       </div>
-
-        <div class="hero-highlight-grid">
-          <div class="hero-highlight">
-            <strong>Data Analytics </strong>
-            Python, R, SQL, SPSS, Stata, Jupyter Notebook.
-          </div>
-          <div class="hero-highlight">
-            <strong>Business Intelligence </strong>
-            Power BI, Tableau, Looker Studio, DAX, Power Query.
-          </div>
-          <div class="hero-highlight">
-            <strong>Insight Generation </strong>
-            Excel, PowerPoint, survey analysis frameworks and reporting templates for executive decks and PDFs.
-          </div>
-        </div>
-
 
       <div class="hero-visual">
         <img src="images/hero-dashboard.jpg" alt="Analytics dashboard on laptop" />
@@ -874,6 +879,11 @@
         <div class="card">
           <form class="contact-form" name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
+            <p class="contact-intro">
+              If you would like to discuss a role, project or collaboration, share a few details below
+              and I will get back to you.
+            </p>
+
             <label for="name">Name</label>
             <input id="name" name="name" type="text" required />
 
@@ -945,7 +955,7 @@
       .then(data => {
         const vc = document.getElementById('view-counter');
         if (vc && data && data.value !== undefined) {
-          vc.textContent = data.value + ' views';
+          vc.textContent = data.value; // numbers only
         }
       })
       .catch(() => {});
