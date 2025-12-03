@@ -11,17 +11,16 @@
     :root {
       --accent-main: #f9fafb;
       --accent-soft: #9ca3af;
-      --border-subtle: #1f2937;
       --accent-primary: #60a5fa;
+      --accent-analytics: rgba(56,189,248,0.18);
+      --accent-bi: rgba(96,165,250,0.18);
+      --accent-insight: rgba(250,204,21,0.18);
+      --border-subtle: rgba(148,163,184,0.35);
+      --radius-card: 22px;
       --shadow-soft: 0 32px 70px rgba(0,0,0,0.85);
-      --radius-card: 20px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Avenir Next", "Avenir", system-ui, -apple-system, BlinkMacSystemFont,
@@ -29,10 +28,8 @@
       color: var(--accent-main);
       line-height: 1.7;
       font-size: 15px;
-
-      /* Laptop image as full-page background, heavy overlay */
       background:
-        linear-gradient(rgba(2,6,23,0.9), rgba(2,6,23,0.94)),
+        linear-gradient(rgba(2,6,23,0.90), rgba(2,6,23,0.94)),
         url("images/hero-dashboard.jpg") center center / cover no-repeat fixed;
       min-height: 100vh;
     }
@@ -41,9 +38,9 @@
     a:hover { text-decoration: underline; }
 
     .page-shell {
-      max-width: 1180px;
+      max-width: 1220px;
       margin: 22px auto 60px;
-      padding: 18px 26px 40px;
+      padding: 22px 30px 40px;
     }
 
     /* HEADER */
@@ -52,7 +49,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 34px;
+      margin-bottom: 36px;
       gap: 20px;
     }
 
@@ -63,27 +60,27 @@
     }
 
     .logo-mark {
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       border-radius: 999px;
       border: 1px solid rgba(148,163,184,0.9);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
-      background: radial-gradient(circle at top left, rgba(96,165,250,0.6), #020617);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+      background: radial-gradient(circle at top left, rgba(96,165,250,0.7), #020617);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.8);
     }
 
     .brand-text {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 3px;
     }
 
     .brand-name {
-      font-size: 20px;
+      font-size: 21px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
     }
@@ -96,8 +93,8 @@
     }
 
     nav a {
-      margin-left: 22px;
-      font-size: 14px;
+      margin-left: 24px;
+      font-size: 15px;
       color: var(--accent-soft);
     }
 
@@ -109,55 +106,54 @@
         align-items: flex-start;
       }
       nav {
-        margin-top: 10px;
+        margin-top: 12px;
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 14px;
       }
-      nav a { margin: 0; }
+      nav a { margin-left: 0; }
     }
 
-    /* HERO */
+    /* MAIN */
 
     main {
-      min-height: calc(100vh - 130px);
+      min-height: calc(100vh - 140px);
       display: flex;
       align-items: flex-start;
     }
 
     .hero-content {
-      max-width: 1020px;
-      padding-top: 10px;
+      width: 100%;
     }
 
     .hero-name {
-      font-size: 32px;
-      margin-top: 6px;
-      margin-bottom: 6px;
+      font-size: 36px;
+      margin-top: 4px;
+      margin-bottom: 8px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       color: #e5e7eb;
     }
 
     .hero-subtitle {
-      font-size: 14px;
+      font-size: 15.5px;
       color: var(--accent-soft);
-      max-width: 720px;
-      margin-bottom: 26px;
+      max-width: 820px;
+      margin-bottom: 28px;
     }
 
-    /* THREE BOXES */
+    /* GRID OF THREE CARDS */
 
     .capability-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
+      gap: 26px;
       margin-top: 4px;
     }
 
     @media (max-width: 1100px) {
       .capability-grid {
-        grid-template-columns: repeat(2, minmax(0,1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
@@ -169,52 +165,100 @@
 
     .capability-card {
       background: rgba(2,6,23,0.93);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
       border-radius: var(--radius-card);
-      border: 1px solid rgba(148,163,184,0.35);
-      padding: 18px 18px 16px;
+      border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      justify-content: space-between;
+      min-height: 260px;
+      overflow: hidden;
+    }
+
+    .capability-inner {
+      padding: 22px 22px 16px;
     }
 
     .capability-header {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 14px;
+      gap: 12px;
+      font-size: 15px;
       font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    .capability-icon {
-      width: 26px;
-      height: 26px;
+    .capability-icon-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      border: 1px solid rgba(156,163,175,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top left, rgba(96,165,250,0.18), rgba(15,23,42,0.95));
       flex-shrink: 0;
     }
 
+    .capability-icon {
+      width: 30px;
+      height: 30px;
+    }
+
     .capability-desc {
+      font-size: 13.5px;
+      color: var(--accent-soft);
+    }
+
+    /* TOOLS BAR */
+
+    .capability-tools-bar {
       font-size: 13px;
-      color: var(--accent-soft);
+      padding: 10px 18px 11px;
+      border-top: 1px solid rgba(31,41,55,0.9);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: baseline;
     }
 
-    .capability-tools {
-      font-size: 12.5px;
-      color: var(--accent-soft);
-    }
-
-    .capability-tools strong {
+    .capability-tools-label {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.12em;
       color: #e5e7eb;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+
+    .tool-pill {
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      font-size: 11.2px;
+      color: #e5e7eb;
+      background: rgba(15,23,42,0.9);
+    }
+
+    .capability-card--analytics .capability-tools-bar {
+      background: var(--accent-analytics);
+    }
+    .capability-card--bi .capability-tools-bar {
+      background: var(--accent-bi);
+    }
+    .capability-card--insight .capability-tools-bar {
+      background: var(--accent-insight);
     }
 
     .hero-links {
-      margin-top: 22px;
+      margin-top: 26px;
       font-size: 13px;
       color: var(--accent-soft);
     }
 
     footer {
-      margin-top: 30px;
+      margin-top: 34px;
       font-size: 11px;
       color: var(--accent-soft);
       text-align: center;
@@ -234,14 +278,14 @@
       </div>
 
       <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html" style="color: var(--accent-primary)">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
 
-    <!-- MAIN HERO -->
+    <!-- MAIN -->
     <main>
       <div class="hero-content">
         <h1 class="hero-name">Sandra Otieno</h1>
@@ -251,84 +295,115 @@
         </p>
 
         <div class="capability-grid">
-          <!-- Data Analytics -->
-          <div class="capability-card">
-            <div class="capability-header">
-              <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="11" width="4" height="10" rx="1.3" fill="#38bdf8"/>
-                <rect x="10" y="7" width="4" height="14" rx="1.3" fill="#60a5fa"/>
-                <rect x="17" y="4" width="4" height="17" rx="1.3" fill="#a855f7"/>
-              </svg>
-              <span>Data Analytics</span>
+          <!-- DATA ANALYTICS -->
+          <article class="capability-card capability-card--analytics">
+            <div class="capability-inner">
+              <div class="capability-header">
+                <div class="capability-icon-wrap">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="11" width="4" height="10" rx="1.3" fill="#38bdf8"/>
+                    <rect x="10" y="7" width="4" height="14" rx="1.3" fill="#60a5fa"/>
+                    <rect x="17" y="4" width="4" height="17" rx="1.3" fill="#a855f7"/>
+                  </svg>
+                </div>
+                <span>Data Analytics</span>
+              </div>
+              <p class="capability-desc">
+                Data analytics is the systematic exploration of raw data using statistical methods, coding
+                and algorithmic techniques to uncover trends, patterns and relationships. It transforms
+                datasets into measurable evidence that explains what happened, why it happened and what is
+                likely to happen next. It spans descriptive, diagnostic, predictive and prescriptive analysis,
+                enabling teams to quantify behaviour, model scenarios and support data-driven actions.
+              </p>
             </div>
-            <div class="capability-desc">
-              Data analytics is the systematic exploration of raw data using statistical methods, coding,
-              and algorithmic techniques to uncover trends, patterns, and relationships. It transforms large
-              and small datasets into measurable evidence that explains what happened, why it happened, and
-              what is likely to happen next. It spans descriptive, diagnostic, predictive and prescriptive
-              analysis, enabling teams to quantify behaviour, model scenarios and support data-driven actions
-              across products, operations and strategy.
+            <div class="capability-tools-bar">
+              <span class="capability-tools-label">Core tools</span>
+              <span class="tool-pill">Python</span>
+              <span class="tool-pill">R</span>
+              <span class="tool-pill">SQL</span>
+              <span class="tool-pill">SPSS</span>
+              <span class="tool-pill">Stata</span>
+              <span class="tool-pill">Jupyter Notebook</span>
             </div>
-            <div class="capability-tools">
-              <strong>Core tools:</strong> Python, R, SQL, SPSS, Stata, Jupyter Notebook.
-            </div>
-          </div>
+          </article>
 
-          <!-- Business Intelligence -->
-          <div class="capability-card">
-            <div class="capability-header">
-              <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
-                <path d="M6 14l3-4 2.5 2L15 9l3 3" fill="none" stroke="#60a5fa" stroke-width="1.7"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="8" cy="9" r="1" fill="#38bdf8"/>
-                <circle cx="11.5" cy="11.3" r="1" fill="#38bdf8"/>
-                <circle cx="15" cy="8.8" r="1" fill="#38bdf8"/>
-                <circle cx="18" cy="12" r="1" fill="#38bdf8"/>
-              </svg>
-              <span>Business Intelligence</span>
+          <!-- BUSINESS INTELLIGENCE -->
+          <article class="capability-card capability-card--bi">
+            <div class="capability-inner">
+              <div class="capability-header">
+                <div class="capability-icon-wrap">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="14" rx="2"
+                          fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+                    <path d="M6 14l3-4 2.5 2L15 9l3 3"
+                          fill="none" stroke="#60a5fa" stroke-width="1.7"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="8" cy="9" r="1.1" fill="#38bdf8"/>
+                    <circle cx="11.5" cy="11.3" r="1.1" fill="#38bdf8"/>
+                    <circle cx="15" cy="8.8" r="1.1" fill="#38bdf8"/>
+                    <circle cx="18" cy="12" r="1.1" fill="#38bdf8"/>
+                  </svg>
+                </div>
+                <span>Business Intelligence</span>
+              </div>
+              <p class="capability-desc">
+                Business intelligence is the development of integrated data systems, dashboards and
+                reporting pipelines that convert complex organisational data into consistent, real-time
+                visibility. It focuses on building reliable data infrastructure, automated metrics,
+                standardised KPIs and interactive visual tools that help teams monitor performance,
+                identify deviations and align decisions with business goals.
+              </p>
             </div>
-            <div class="capability-desc">
-              Business intelligence is the development of integrated data systems, dashboards and reporting
-              pipelines that convert complex organisational data into consistent, real-time visibility. It
-              focuses on building reliable data infrastructure, automated metrics, standardised KPIs and
-              interactive visual tools that help teams monitor performance, identify deviations and align
-              decisions with business goals.
+            <div class="capability-tools-bar">
+              <span class="capability-tools-label">Core tools</span>
+              <span class="tool-pill">Power BI</span>
+              <span class="tool-pill">DAX</span>
+              <span class="tool-pill">Power Query</span>
+              <span class="tool-pill">Tableau</span>
+              <span class="tool-pill">Looker Studio</span>
+              <span class="tool-pill">ETL/ELT data models</span>
             </div>
-            <div class="capability-tools">
-              <strong>Core tools:</strong> Power BI (DAX, Power Query), Tableau, Looker Studio, ETL/ELT data models.
-            </div>
-          </div>
+          </article>
 
-          <!-- Insight Generation -->
-          <div class="capability-card">
-            <div class="capability-header">
-              <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M9 19h6" stroke="#e5e7eb" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M10 21h4" stroke="#e5e7eb" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M12 4a5 5 0 0 0-5 5c0 1.8.9 3.1 2.2 4.1.4.3.6.7.7 1.2l.1.7h4l.1-.7c.1-.5.3-.9.7-1.2C16.1 12.1 17 10.8 17 9a5 5 0 0 0-5-5z"
-                      fill="none" stroke="#facc15" stroke-width="1.6" />
-                <circle cx="12" cy="9" r="1.2" fill="#facc15"/>
-              </svg>
-              <span>Insight Generation</span>
+          <!-- INSIGHT GENERATION -->
+          <article class="capability-card capability-card--insight">
+            <div class="capability-inner">
+              <div class="capability-header">
+                <div class="capability-icon-wrap">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9 19h6" stroke="#e5e7eb" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M10 21h4" stroke="#e5e7eb" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M12 4a5 5 0 0 0-5 5c0 1.8.9 3.1 2.2 4.1.4.3.6.7.7 1.2l.1.7h4l.1-.7c.1-.5.3-.9.7-1.2
+                             C16.1 12.1 17 10.8 17 9a5 5 0 0 0-5-5z"
+                          fill="none" stroke="#facc15" stroke-width="1.6" />
+                    <circle cx="12" cy="9" r="1.3" fill="#facc15"/>
+                  </svg>
+                </div>
+                <span>Insight Generation</span>
+              </div>
+              <p class="capability-desc">
+                Insight generation is the interpretation stage where analytical findings are translated into
+                meaning, narratives and strategic recommendations. It goes beyond numbers to explain
+                implications, opportunities, risks and human-centred drivers behind the data. It connects
+                patterns to real-world behaviour, synthesises evidence into stories and offers actionable
+                guidance that influences decisions, innovation and business strategy.
+              </p>
             </div>
-            <div class="capability-desc">
-              Insight generation is the interpretation stage where analytical findings are translated into
-              meaning, narratives and strategic recommendations. It goes beyond numbers to explain
-              implications, opportunities, risks and human-centred drivers behind the data. It connects
-              patterns to real-world behaviour, synthesises evidence into stories and offers actionable
-              guidance that influences decisions, innovation and business strategy.
+            <div class="capability-tools-bar">
+              <span class="capability-tools-label">Core tools</span>
+              <span class="tool-pill">Excel</span>
+              <span class="tool-pill">PowerPoint</span>
+              <span class="tool-pill">Survey frameworks</span>
+              <span class="tool-pill">PDF reporting</span>
+              <span class="tool-pill">Executive decks</span>
             </div>
-            <div class="capability-tools">
-              <strong>Core tools:</strong> Excel, PowerPoint, survey analysis frameworks, PDF and deck reporting.
-            </div>
-          </div>
+          </article>
         </div>
 
-        <div class="hero-links">
+        <p class="hero-links">
           See detailed work on the <a href="projects.html">Projects</a> page or connect via the
           <a href="contact.html">Contact</a> page.
-        </div>
+        </p>
       </div>
     </main>
 
