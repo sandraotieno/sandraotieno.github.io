@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sandra Beldine Otieno – Data Analytics Portfolio</title>
+  <title>Sandra Otieno – Data Analytics Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Home of Sandra Beldine Otieno's Data Analytics Portfolio, showcasing data analytics, business intelligence and insight generation work across African markets." />
+        content="Portfolio of Sandra Otieno, showcasing data analytics, business intelligence and insight generation work across African markets." />
 
   <style>
     :root {
       --bg-page: #020617;
-      --bg-shell: #020617;
-      --bg-card: #020617;
       --accent-main: #f9fafb;
       --accent-soft: #9ca3af;
       --border-subtle: #1f2937;
@@ -25,42 +23,62 @@
     body {
       font-family: "Avenir Next", "Avenir", system-ui, -apple-system, BlinkMacSystemFont,
                    "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #0b1120 0, #020617 50%, #000 100%);
+      background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #000 100%);
       color: var(--accent-main);
-      line-height: 1.6;
+      line-height: 1.7;
       font-size: 15px;
     }
 
     a { color: var(--accent-primary); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* FULL-PAGE SHELL – no big card, just margins */
     .page-shell {
-      max-width: 1170px;
-      margin: 32px auto 64px;
-      padding: 30px 26px 40px;
-      background:
-        radial-gradient(circle at top left, rgba(37,99,235,0.25), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(56,189,248,0.25), transparent 60%),
-        var(--bg-shell);
-      border-radius: 30px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(148,163,184,0.35);
+      max-width: 1180px;
+      margin: 22px auto 60px;
+      padding: 10px 26px 40px;
     }
 
-    /* HEADER & NAV */
+    /* HEADER */
 
     header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 24px;
-      margin-bottom: 32px;
+      align-items: center;
+      margin-bottom: 30px;
+      gap: 20px;
     }
 
     .brand-wrapper {
       display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 700;
+      background: radial-gradient(circle at top left, rgba(96,165,250,0.5), #020617);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+
+    .brand-text {
+      display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 2px;
+    }
+
+    .brand-name {
+      font-size: 19px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
     .brand-tagline {
@@ -70,51 +88,46 @@
       color: var(--accent-soft);
     }
 
-    .brand {
-      font-size: 20px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent-main);
-      margin-bottom: 10px;
-    }
-
-    .nav-links a {
+    nav a {
       margin-left: 22px;
       font-size: 14px;
       color: var(--accent-soft);
     }
 
-    .nav-links a:hover {
-      color: var(--accent-primary);
-    }
+    nav a:hover { color: var(--accent-primary); }
 
     @media (max-width: 900px) {
       header {
         flex-direction: column;
         align-items: flex-start;
       }
-      .nav-links {
-        margin-top: 12px;
+      nav {
+        margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
       }
-      .nav-links a { margin: 0; }
+      nav a { margin: 0; }
     }
 
-    /* HOME LAYOUT */
+    /* HERO */
+
+    main {
+      margin-top: 8px;
+    }
 
     #home {
       display: grid;
       grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
-      gap: 32px;
-      align-items: flex-start;
-      margin-bottom: 40px;
+      gap: 34px;
+      align-items: center;
+      min-height: min(80vh, 640px);
     }
 
     @media (max-width: 900px) {
       #home {
         grid-template-columns: 1fr;
+        min-height: auto;
       }
     }
 
@@ -124,77 +137,127 @@
       gap: 18px;
     }
 
-    .hero-title {
-      font-size: 32px;
+    .hero-label {
+      font-size: 12px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 12px;
-      margin-bottom: 4px;
+      color: var(--accent-soft);
+    }
+
+    .hero-name {
+      font-size: 30px;
+      margin-top: 6px;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #e5e7eb;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: var(--accent-soft);
+      max-width: 520px;
+    }
+
+    .hero-rotating-title {
+      margin-top: 18px;
+      font-size: 15px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
       color: var(--accent-primary);
     }
 
     .hero-desc {
-      font-size: 15px;
-      line-height: 1.7;
+      margin-top: 6px;
+      font-size: 14px;
       color: var(--accent-soft);
       max-width: 720px;
-      margin-top: 6px;
     }
 
-    .hero-highlight-grid {
+    /* THREE CAPABILITY BOXES */
+
+    .capability-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 10px;
-      margin-top: 10px;
-      margin-bottom: 4px;
+      gap: 14px;
+      margin-top: 18px;
     }
 
-    .hero-highlight {
+    .capability-card {
       background: #020617;
-      border-radius: 16px;
-      padding: 10px 12px;
+      border-radius: 18px;
       border: 1px solid var(--border-subtle);
-      font-size: 12px;
+      padding: 12px 12px 11px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.75);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .capability-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .capability-icon {
+      font-size: 16px;
+    }
+
+    .capability-tagline {
+      font-size: 11px;
       color: var(--accent-soft);
     }
 
-    .hero-highlight strong {
-      display: block;
-      font-size: 13px;
-      color: var(--accent-main);
-      margin-bottom: 3px;
+    .capability-tools {
+      font-size: 11px;
+      color: var(--accent-soft);
     }
+
+    .capability-tools strong {
+      color: #e5e7eb;
+    }
+
+    .hero-links {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    /* HERO IMAGE */
 
     .hero-visual {
       position: relative;
-      margin-top: -32px; /* pull image up slightly */
+      margin-top: -10px;
     }
 
     .hero-visual img {
       width: 100%;
-      border-radius: var(--radius-card);
-      box-shadow: 0 26px 70px rgba(0,0,0,0.95);
+      border-radius: 26px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.95);
       object-fit: cover;
+      max-height: 420px;
     }
 
     .hero-visual-caption {
       position: absolute;
       bottom: 14px;
-      left: 18px;
-      background: rgba(15,23,42,0.95);
-      color: #e5e7eb;
-      border-radius: 12px;
-      padding: 10px 14px;
+      left: 16px;
+      right: 16px;
+      background: rgba(15,23,42,0.96);
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.7);
+      padding: 9px 12px;
       font-size: 11px;
-      max-width: 80%;
-      border: 1px solid rgba(148,163,184,0.6);
+      color: #e5e7eb;
     }
 
     .hero-visual-caption strong {
-      display: block;
       font-size: 12px;
-      margin-bottom: 4px;
       color: #facc15;
+      display: block;
+      margin-bottom: 4px;
     }
 
     .hero-visual-caption p {
@@ -202,83 +265,18 @@
     }
 
     .hero-visual-caption .flow-lines {
+      color: var(--accent-soft);
       font-size: 10.5px;
-      color: var(--accent-soft);
     }
 
-    .flow-lines strong {
+    .hero-visual-caption .flow-lines strong {
       color: #e5e7eb;
-      font-weight: 600;
     }
 
-    /* FEATURED PROJECTS */
-
-    .section-heading {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .section-intro {
-      font-size: 14px;
-      color: var(--accent-soft);
-      margin-bottom: 16px;
-      max-width: 720px;
-    }
-
-    .featured-projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-bottom: 10px;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-card);
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
-      padding: 12px 14px 12px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project-title {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .project-meta {
-      font-size: 12px;
-      color: var(--accent-primary);
-      margin-bottom: 6px;
-    }
-
-    .project-desc {
-      font-size: 13px;
-      color: var(--accent-soft);
-      margin-bottom: 8px;
-      flex-grow: 1;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 6px;
-    }
-
-    .project-tags span {
-      font-size: 10px;
-      border-radius: 999px;
-      padding: 3px 7px;
-      background: #0f172a;
-      color: #e5e7eb;
-      border: 1px solid var(--border-subtle);
-    }
+    /* FOOTER */
 
     footer {
-      margin-top: 18px;
+      margin-top: 30px;
       font-size: 11px;
       color: var(--accent-soft);
       text-align: center;
@@ -290,11 +288,14 @@
     <!-- HEADER -->
     <header>
       <div class="brand-wrapper">
-        <div class="brand-tagline">DATA ANALYTICS PORTFOLIO</div>
-        <div class="brand">SANDRA B. OTIENO</div>
+        <div class="logo-mark">SO</div>
+        <div class="brand-text">
+          <div class="brand-name">SANDRA OTIENO</div>
+          <div class="brand-tagline">DATA ANALYTICS · BUSINESS INTELLIGENCE · INSIGHT GENERATION</div>
+        </div>
       </div>
 
-      <nav class="nav-links">
+      <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
@@ -302,13 +303,20 @@
       </nav>
     </header>
 
-    <!-- HOME HERO -->
+    <!-- HERO -->
     <main id="home">
       <div class="home-left">
-        <h1 class="hero-title">
-          <span id="heroWord">Data Analytics</span>
-        </h1>
-        <p id="heroDesc" class="hero-desc">
+        <div class="hero-label">Data Analytics Portfolio</div>
+        <h1 class="hero-name">Sandra Otieno</h1>
+        <p class="hero-subtitle">
+          I design and deliver analytics systems that start with raw operational or survey data and end in
+          executive-ready stories for decision-makers.
+        </p>
+
+        <div class="hero-rotating-title" id="heroWord">
+          Data Analytics
+        </div>
+        <p class="hero-desc" id="heroDesc">
           Data analytics is the systematic exploration of raw data using statistical methods, coding,
           and algorithmic techniques to uncover trends, patterns, and relationships. It transforms large
           and small datasets into measurable evidence that explains what happened, why it happened, and
@@ -317,28 +325,61 @@
           data-driven actions across products, operations, and strategy.
         </p>
 
-        <div class="hero-highlight-grid">
-          <div class="hero-highlight">
-            <strong>Data Analytics</strong>
-            Python, R, SQL, SPSS, Stata, Jupyter Notebook.
+        <!-- THREE BOXES -->
+        <div class="capability-grid">
+          <div class="capability-card">
+            <div class="capability-header">
+              <span class="capability-icon">📊</span>
+              <span>Data Analytics</span>
+            </div>
+            <div class="capability-tagline">
+              From messy survey or operational files to structured tables and models.
+            </div>
+            <div class="capability-tools">
+              <strong>Core tools:</strong> Python, R, SQL, SPSS, Stata, Jupyter.
+            </div>
           </div>
-          <div class="hero-highlight">
-            <strong>Business Intelligence</strong>
-            Power BI, Tableau, Looker Studio, DAX, Power Query, ETL/ELT data models.
+
+          <div class="capability-card">
+            <div class="capability-header">
+              <span class="capability-icon">📈</span>
+              <span>Business Intelligence</span>
+            </div>
+            <div class="capability-tagline">
+              Dashboards and reporting layers that keep performance visible in real time.
+            </div>
+            <div class="capability-tools">
+              <strong>Core tools:</strong> Power BI (DAX, Power Query), Tableau, Looker Studio, ETL/ELT data models.
+            </div>
           </div>
-          <div class="hero-highlight">
-            <strong>Insight Generation</strong>
-            Excel, PowerPoint, survey analysis frameworks and reporting templates for executive decks and PDFs.
+
+          <div class="capability-card">
+            <div class="capability-header">
+              <span class="capability-icon">💡</span>
+              <span>Insight Generation</span>
+            </div>
+            <div class="capability-tagline">
+              Translating analysis into implications, options and narratives for stakeholders.
+            </div>
+            <div class="capability-tools">
+              <strong>Core tools:</strong> Excel, PowerPoint, survey frameworks, PDF and deck reporting.
+            </div>
           </div>
+        </div>
+
+        <div class="hero-links">
+          Explore the full work on the <a href="projects.html">Projects</a> page.
         </div>
       </div>
 
       <div class="hero-visual">
-        <!-- replace src with your actual hero image path in the repo -->
-        <img src="images/hero-dashboard.jpg" alt="Analytics dashboard on laptop" />
+        <!-- update this path to your actual hero image in the repo -->
+        <img src="images/hero-dashboard.jpg" alt="Analytics dashboard interface" />
         <div class="hero-visual-caption">
           <strong>From data to decisions</strong>
-          <p>Dashboards, models and narratives that help teams quickly understand performance, risk and opportunity.</p>
+          <p>
+            Dashboards, models and narratives that help teams quickly understand performance, risk and opportunity.
+          </p>
           <p class="flow-lines">
             <strong>Data Analytics</strong> → produces evidence and patterns.<br>
             <strong>Business Intelligence</strong> → builds systems and tools for consistent visibility.<br>
@@ -348,62 +389,8 @@
       </div>
     </main>
 
-    <!-- FEATURED PROJECTS PREVIEW (links will point to full Projects page) -->
-    <section aria-label="Featured projects">
-      <h2 class="section-heading">Featured Projects</h2>
-      <p class="section-intro">
-        A sample of analytics, Business Intelligence and risk projects. The full list will live on the
-        dedicated <a href="projects.html">Projects</a> page.
-      </p>
-
-      <div class="featured-projects">
-        <article class="project-card">
-          <div class="project-title">Market Basket Analysis using Apriori &amp; FP-Growth</div>
-          <div class="project-meta">Retail demand · Multi-country survey data</div>
-          <p class="project-desc">
-            Analysed purchase combinations across African markets using Apriori and FP-Growth to identify
-            core versus discretionary baskets and resilience strategies under cost-of-living pressure.
-          </p>
-          <div class="project-tags">
-            <span>Python</span><span>Association Rules</span><span>Retail</span>
-          </div>
-          <a href="pdf/Market Basket Analysis using Apriori Algorithm.pdf" target="_blank">View PDF</a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-title">Loan Credibility Prediction</div>
-          <div class="project-meta">Credit risk · Classification model</div>
-          <p class="project-desc">
-            Built and compared models to predict loan credibility based on applicant and account features,
-            analysing feature importance for credit decision support.
-          </p>
-          <div class="project-tags">
-            <span>Python</span><span>Scikit-Learn</span><span>Classification</span>
-          </div>
-          <a href="https://github.com/sandraotieno/Loan-Credibility-Prediction" target="_blank">View on GitHub</a>
-        </article>
-
-        <article class="project-card">
-          <div class="project-title">Energy Demand Dashboard</div>
-          <div class="project-meta">Business intelligence · Power BI/Tableau</div>
-          <p class="project-desc">
-            Designed an executive dashboard summarising energy demand trends, peak load patterns and
-            operational KPIs for quick decision-making.
-          </p>
-          <div class="project-tags">
-            <span>Business Intelligence</span><span>Dashboards</span><span>ETL/ELT</span>
-          </div>
-          <a href="pdf/Energy Dashboard.pdf" target="_blank">View PDF</a>
-        </article>
-      </div>
-
-      <p class="section-intro" style="margin-top:4px;">
-        See more work on the full <a href="projects.html">Projects</a> page.
-      </p>
-    </section>
-
     <footer>
-      © 2024 Sandra Beldine Otieno · Data Analytics Portfolio
+      © 2024 Sandra Otieno · Data Analytics Portfolio
     </footer>
   </div>
 
@@ -436,3 +423,4 @@
   </script>
 </body>
 </html>
+
