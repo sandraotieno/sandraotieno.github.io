@@ -2,659 +2,791 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sandra Beldine Otieno | Data Analytics & Business Intelligence Portfolio</title>
+  <title>Sandra Beldine Otieno – Data Analytics & Business Intelligence Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Portfolio of Sandra Beldine Otieno, a Data Analytics and Business Intelligence specialist delivering end-to-end analytics, dashboards and insight stories for banks, retailers, FMCG and development organisations." />
+
   <style>
-  :root {
-    --bg-page: #020617;      /* very dark background */
-    --bg-wrapper: #020617;
-    --card: #020617;
-    --accent: #e5e7eb;       /* main text */
-    --accent-strong: #f9fafb;
-    --pill-bg: #0f172a;
-    --pill-border: #1f2937;
-    --highlight: #38bdf8;    /* cyan accent */
-    --muted: #9ca3af;
-    --border-subtle: #1f2937;
-  }
+    /* ------------ BASE + THEME ------------ */
+    :root {
+      --bg-page: #e7ebf4;          /* soft grey background */
+      --bg-card: #ffffff;          /* white cards floating on top */
+      --accent-dark: #111827;      /* main headings */
+      --accent-soft: #6b7280;      /* muted text */
+      --accent-pill: #0f172a;      /* pill background */
+      --accent-pill-text: #f9fafb;
+      --accent-primary: #2563eb;   /* links / highlights */
+      --accent-secondary: #22c55e; /* small accents if needed */
+      --border-subtle: #e5e7eb;
+      --shadow-soft: 0 26px 60px rgba(15, 23, 42, 0.18);
+      --radius-card: 22px;
+    }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: radial-gradient(circle at top, #0b1120 0, #020617 55%, #000000 100%);
-    color: var(--accent);
-    line-height: 1.6;
-  }
+    body {
+      font-family: "Avenir Next", "Avenir", system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #c7d2fe 0, #e7ebf4 40%, #d4d4d8 100%);
+      color: var(--accent-dark);
+      line-height: 1.6;
+    }
 
-  a { color: #7dd3fc; text-decoration: none; }
-  a:hover { text-decoration: underline; }
+    a { color: var(--accent-primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-  .wrapper {
-    max-width: 1120px;
-    margin: 32px auto 64px;
-    padding: 28px 24px 40px;
-    background: radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 55%),
-                radial-gradient(circle at bottom right, rgba(129,140,248,0.18), transparent 60%),
-                #020617;
-    border-radius: 26px;
-    border: 1px solid rgba(148,163,184,0.25);
-    box-shadow: 0 34px 70px rgba(15,23,42,0.9);
-  }
+    .page-shell {
+      max-width: 1170px;
+      margin: 32px auto 64px;
+      padding: 30px 26px 40px;
+      background: #f7f8fc;
+      border-radius: 30px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148,163,184,0.25);
+    }
 
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 28px;
-  }
+    /* ------------ HEADER & NAV ------------ */
 
-  .brand {
-    font-size: 18px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
 
-  .nav-links a {
-    margin-left: 18px;
-    font-size: 14px;
-    color: var(--muted);
-  }
-  .nav-links a:hover { color: var(--highlight); }
+    .brand {
+      font-size: 18px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #4b5563;
+    }
 
-  /* HERO */
+    .nav-links a {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #6b7280;
+    }
 
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
-    gap: 32px;
-    align-items: center;
-    margin-bottom: 40px;
-  }
+    .nav-links a:hover {
+      color: var(--accent-primary);
+    }
 
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; }
-    header { justify-content: center; text-align: center; }
-    .nav-links { margin-top: 8px; }
-  }
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        margin: 8px 16px 0 0;
+      }
+    }
 
-  .hero-name {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: .18em;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
+    /* ------------ HOME (HERO) ------------ */
 
-  .hero-title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--accent-strong);
-  }
+    #home {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
 
-  .hero-subline {
-    font-size: 15px;
-    color: var(--highlight);
-    margin-bottom: 14px;
-  }
+    @media (max-width: 900px) {
+      #home {
+        grid-template-columns: 1fr;
+      }
+    }
 
-  .hero-text {
-    color: var(--muted);
-    margin-bottom: 18px;
-    font-size: 14px;
-  }
+    .hero-label {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
 
-  .pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 18px;
-  }
+    .hero-title {
+      font-size: 34px;
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--accent-dark);
+    }
 
-  .pill {
-    border-radius: 999px;
-    border: 1px solid var(--pill-border);
-    background: var(--pill-bg);
-    padding: 6px 14px;
-    font-size: 11px;
-    color: #e5e7eb;
-  }
+    .hero-rotating {
+      display: inline-block;
+      color: var(--accent-primary);
+    }
 
-  .hero-pill-grid {
-    display: grid;
-    grid-template-columns: minmax(0,1fr);
-    gap: 10px;
-  }
+    .hero-subline {
+      font-size: 15px;
+      margin-bottom: 16px;
+      color: #4b5563;
+    }
 
-  .hero-pill {
-    background: #020617;
-    border-radius: 14px;
-    padding: 10px 12px;
-    border: 1px solid var(--pill-border);
-  }
+    .hero-text {
+      font-size: 14px;
+      color: var(--accent-soft);
+      margin-bottom: 20px;
+      max-width: 95%;
+    }
 
-  .hero-pill-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent-strong);
-    margin-bottom: 2px;
-  }
+    .hero-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
 
-  .hero-pill-sub {
-    font-size: 11px;
-    color: var(--muted);
-  }
+    .hero-pill {
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 11px;
+      background: var(--accent-pill);
+      color: var(--accent-pill-text);
+      letter-spacing: 0.03em;
+    }
 
-  .hero-visual {
-    position: relative;
-    min-height: 260px;
-  }
+    .hero-highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
 
-  .hero-visual img {
-    width: 100%;
-    border-radius: 22px;
-    box-shadow: 0 26px 70px rgba(0,0,0,0.9);
-    object-fit: cover;
-  }
+    .hero-highlight {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 10px 12px;
+      border: 1px solid var(--border-subtle);
+      font-size: 11px;
+      color: #4b5563;
+    }
 
-  .hero-overlay-card {
-    position: absolute;
-    bottom: 14px;
-    left: 16px;
-    background: rgba(15,23,42,0.96);
-    color: #e5e7eb;
-    padding: 10px 14px;
-    border-radius: 12px;
-    font-size: 11px;
-    max-width: 78%;
-    border: 1px solid rgba(148,163,184,0.5);
-  }
+    .hero-highlight strong {
+      display: block;
+      font-size: 12px;
+      color: var(--accent-dark);
+      margin-bottom: 2px;
+    }
 
-  .hero-overlay-card strong {
-    display: block;
-    font-size: 12px;
-    color: #fbbf24;
-    margin-bottom: 4px;
-  }
+    .hero-visual {
+      position: relative;
+    }
 
-  /* SECTIONS BELOW HERO */
-  section {
-    margin-bottom: 42px;
-  }
+    .hero-visual img {
+      width: 100%;
+      border-radius: var(--radius-card);
+      box-shadow: 0 26px 60px rgba(15,23,42,0.45);
+      object-fit: cover;
+    }
 
-  section h2 {
-    font-size: 20px;
-    margin-bottom: 8px;
-    color: var(--accent-strong);
-  }
+    .hero-visual-caption {
+      position: absolute;
+      bottom: 14px;
+      left: 18px;
+      background: rgba(15,23,42,0.9);
+      color: #e5e7eb;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 11px;
+      max-width: 80%;
+    }
 
-  section p.section-intro {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 14px;
-  }
+    .hero-visual-caption strong {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 3px;
+      color: #facc15;
+    }
 
-  .two-col {
-    display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
-    gap: 24px;
-  }
+    /* ------------ ABOUT & SKILLS ------------ */
 
-  @media (max-width: 900px) {
-    .two-col { grid-template-columns: 1fr; }
-  }
+    section {
+      margin-bottom: 48px;
+    }
 
-  .card {
-    background: #020617;
-    border-radius: 16px;
-    padding: 16px 16px 14px;
-    border: 1px solid var(--pill-border);
-    box-shadow: 0 18px 40px rgba(15,23,42,0.7);
-  }
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: var(--accent-dark);
+    }
 
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
-  }
+    .section-intro {
+      font-size: 14px;
+      color: var(--accent-soft);
+      margin-bottom: 18px;
+    }
 
-  .skills-list span {
-    font-size: 11px;
-    padding: 6px 9px;
-    border-radius: 999px;
-    background: #020617;
-    border: 1px solid var(--pill-border);
-    color: #e5e7eb;
-  }
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
+      gap: 24px;
+    }
 
-  .project-group-title {
-    font-size: 15px;
-    margin: 18px 0 6px;
-    color: var(--highlight);
-    text-transform: uppercase;
-    letter-spacing: .12em;
-  }
+    @media (max-width: 900px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-  }
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.12);
+    }
 
-  .project-card {
-    background: #020617;
-    border-radius: 16px;
-    padding: 14px 14px 12px;
-    border: 1px solid var(--pill-border);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 18px 40px rgba(15,23,42,0.7);
-  }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
 
-  .project-title { font-size: 15px; margin-bottom: 3px; color: var(--accent-strong); }
-  .project-meta { font-size: 11px; color: var(--highlight); margin-bottom: 6px; }
-  .project-desc { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .skills-list span {
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 11px;
+      background: #eef2ff;
+      color: #1f2937;
+    }
 
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 8px;
-  }
+    .skills-heading {
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      color: #111827;
+    }
 
-  .project-tags span {
-    font-size: 10px;
-    background: #020617;
-    border: 1px solid var(--pill-border);
-    color: #e5e7eb;
-    padding: 3px 7px;
-    border-radius: 999px;
-  }
+    /* ------------ PROJECTS ------------ */
 
-  .project-links a {
-    font-size: 11px;
-    margin-right: 10px;
-  }
+    #projects {
+      margin-top: 8px;
+    }
 
-  .article-item {
-    padding: 11px 13px;
-    border-radius: 12px;
-    background: #020617;
-    border: 1px solid var(--pill-border);
-    margin-bottom: 8px;
-    font-size: 12px;
-    color: var(--muted);
-    box-shadow: 0 14px 30px rgba(15,23,42,0.7);
-  }
+    .project-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
 
-  .article-item a { font-size: 12px; }
+    .project-tab {
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 12px;
+      border: 1px solid var(--border-subtle);
+      background: #e5e7eb;
+      color: #374151;
+      cursor: pointer;
+    }
 
-  footer {
-    margin-top: 8px;
-    font-size: 11px;
-    color: var(--muted);
-    text-align: center;
-  }
-</style>
+    .project-tab.active {
+      background: var(--accent-primary);
+      color: #f9fafb;
+      border-color: var(--accent-primary);
+    }
 
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .project-body {
+      padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--accent-dark);
+    }
+
+    .project-meta {
+      font-size: 11px;
+      color: var(--accent-primary);
+      margin-bottom: 6px;
+    }
+
+    .project-desc {
+      font-size: 12px;
+      color: var(--accent-soft);
+      margin-bottom: 8px;
+      flex-grow: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+
+    .project-tags span {
+      font-size: 10px;
+      border-radius: 999px;
+      padding: 3px 7px;
+      background: #eef2ff;
+      color: #1f2937;
+    }
+
+    .project-links a {
+      font-size: 11px;
+      margin-right: 10px;
+    }
+
+    /* ------------ CONTACT ------------ */
+
+    #contact {
+      margin-top: 8px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-icons-list {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .contact-icons-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--accent-soft);
+      margin-bottom: 10px;
+    }
+
+    .icon-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e5e7eb;
+    }
+
+    .icon-circle svg {
+      width: 15px;
+      height: 15px;
+      fill: #374151;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #4b5563;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+      font-size: 13px;
+      font-family: inherit;
+      margin-bottom: 12px;
+      outline: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 1px rgba(37,99,235,0.2);
+    }
+
+    .contact-form button {
+      border: none;
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-family: inherit;
+      background: var(--accent-primary);
+      color: #f9fafb;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      filter: brightness(1.03);
+    }
+
+    .view-counter {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="wrapper">
+  <div class="page-shell">
+    <!-- HEADER -->
     <header>
-      <div class="brand">SANDRA OTIENO</div>
+      <div class="brand">SANDRA B. OTIENO</div>
       <nav class="nav-links">
-        <a href="#about">About</a>
+        <a href="#home">Home</a>
+        <a href="#about">About & Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#articles">Articles</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <!-- HERO -->
-<section class="hero">
-  <div>
-    <h1 class="hero-title">Data Analytics, Business Intelligence & Insight Storytelling</h1>
-    <p class="hero-subtitle">Sandra Beldine Otieno · Nairobi, Kenya</p>
-    <p class="hero-text">
-      I build analytics and Business Intelligence solutions that move from raw data to clear,
-      executive-ready decisions. My work spans SQL data models, BI dashboards and deep-dive
-      analysis for banking, retail, FMCG and development organisations.
-    </p>
-    <div class="hero-tags">
-      <div class="tag">Analytics Strategy & KPI Design</div>
-      <div class="tag">Business Intelligence Development</div>
-      <div class="tag">Predictive & Statistical Modelling</div>
-      <div class="tag">Data Storytelling & Insight Generation</div>
-      <div class="tag">Python · SQL · Power BI · Tableau</div>
-    </div>
-    <div class="hero-actions">
-      <a href="#projects">View Projects</a>
-      <a class="secondary" href="#articles">Read Articles</a>
-      <a class="secondary" href="https://github.com/sandraotieno" target="_blank">GitHub</a>
-    </div>
-  </div>
+    <!-- HOME / HERO -->
+    <section id="home">
+      <div>
+        <div class="hero-label">DATA ANALYTICS PORTFOLIO</div>
+        <h1 class="hero-title">
+          <span class="hero-rotating" id="hero-rotating">Data Analytics</span><br />
+          for real decisions.
+        </h1>
+        <p class="hero-subline">
+          Data Analytics · Business Intelligence · Insight Generation
+        </p>
+        <p class="hero-text">
+          I design and deliver analytics systems that start with raw operational or survey data and end in
+          executive-ready stories. My work combines SQL data models, Python and R analysis, Business
+          Intelligence dashboards and clear narratives that explain what is driving performance, risk and growth.
+        </p>
 
-  <div class="hero-visual">
-    <img src="images/hero-dashboard.jpg" alt="Analytics dashboard on laptop" />
-    <div class="hero-overlay-card">
-      <strong>Turning data into decisions</strong>
-      Dashboards, models and narratives that help leaders understand performance,
-      risk and opportunity at a glance.
-    </div>
-  </div>
-</section>
+        <div class="hero-pill-row">
+          <span class="hero-pill">Analytics Strategy & KPI Design</span>
+          <span class="hero-pill">Data Modelling & Pipelines</span>
+          <span class="hero-pill">Dashboards & Visual Storytelling</span>
+        </div>
+
+        <div class="hero-highlight-grid">
+          <div class="hero-highlight">
+            <strong>Data Analytics</strong>
+            Forecasting, segmentation, demand and financial analytics using Python, R and SQL.
+          </div>
+          <div class="hero-highlight">
+            <strong>Business Intelligence</strong>
+            Power BI, Tableau and Looker Studio dashboards with well-defined KPIs and drill-downs.
+          </div>
+          <div class="hero-highlight">
+            <strong>Insight Generation</strong>
+            Turning analysis into executive dashboards, one-pager briefs and client-ready decks.
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="images/hero-dashboard.jpg" alt="Analytics dashboard on laptop" />
+        <div class="hero-visual-caption">
+          <strong>From data to decisions</strong>
+          Dashboards, models and narratives that help teams quickly understand performance, risk and
+          opportunity.
+        </div>
+      </div>
+    </section>
 
     <!-- ABOUT & SKILLS -->
     <section id="about">
-      <h2>About & Skills</h2>
+      <h2>About Me & Skills</h2>
       <p class="section-intro">
-        My work sits at the intersection of data analytics, Business Intelligence development and
-        market/consumer insight generation.
+        I work end-to-end across the analytics lifecycle: structuring data, building models, designing BI layers
+        and communicating the story behind the numbers.
       </p>
 
       <div class="two-col">
         <div class="card">
-          <h3>About Me</h3>
-          <p style="font-size:14px; color: var(--text-muted); margin-top:8px;">
-            I have a background in <strong>Data Science & Analytics</strong> and more than six years of
-            experience working with multi-country datasets. I enjoy cleaning and structuring data,
-            designing analytical models, building dashboards and explaining what the results mean for
-            growth, risk and operational decisions.
+          <p style="font-size:14px; color:#4b5563;">
+            I am a Data Analytics and Business Intelligence professional with more than five years of experience
+            working with multi-country data across African markets. I enjoy cleaning and structuring messy data,
+            building analytical models and dashboards, and translating results into clear recommendations for
+            banks, FMCG brands, retailers and development partners.
+          </p>
+          <p style="font-size:14px; color:#4b5563; margin-top:10px;">
+            My background combines data science, consumer and market insight, and structured reporting. I am
+            comfortable moving between SQL, Python, BI tools and stakeholder discussions to keep analysis
+            grounded in real business questions.
           </p>
         </div>
 
         <div class="card">
-          <h3>Core Skills</h3>
+          <div class="skills-heading">Core Analytics & BI Skills</div>
           <div class="skills-list">
             <span>Data Cleaning & Preparation</span>
-            <span>Exploratory Data Analysis (EDA)</span>
-            <span>Predictive Modelling</span>
+            <span>Exploratory & Statistical Analysis</span>
+            <span>Forecasting & Time Series</span>
             <span>Segmentation & Behavioural Analytics</span>
-            <span>Time Series & Forecasting</span>
+            <span>Credit & Risk Analytics</span>
+            <span>Financial Performance Analysis</span>
+            <span>Survey Analytics</span>
             <span>Dashboard Design</span>
-            <span>Data Storytelling & Insight Generation</span>
-            <span>Executive Reporting</span>
           </div>
 
-          <h3 style="margin-top:16px;font-size:14px;">Business Intelligence & Tools</h3>
+          <div class="skills-heading">Tools & Platforms</div>
           <div class="skills-list">
             <span>SQL (PostgreSQL, MySQL)</span>
-            <span>Power BI (DAX, Power Query)</span>
+            <span>Python (Pandas, NumPy, Scikit-Learn)</span>
+            <span>R</span>
+            <span>Power BI</span>
             <span>Tableau</span>
             <span>Looker Studio</span>
-            <span>Python (Pandas, NumPy, Scikit-Learn)</span>
-            <span>R (Tidyverse)</span>
             <span>Excel (Advanced)</span>
             <span>SPSS</span>
             <span>Stata</span>
             <span>Jupyter Notebook</span>
             <span>Git & GitHub</span>
-            <span>Snowflake </span>
-            <span>Databricks </span>
-            <span>dbt (learning)</span>
           </div>
         </div>
       </div>
     </section>
-
-    <div class="quote-strip">
-  <img src="images/quote-wood.jpg" alt="Wood background" />
-  <div class="quote-overlay"></div>
-  <div class="quote-content">
-    <div class="quote-text">
-      “The goal is to turn data into information, and information into insight.”
-      <span>— Carly Fiorina</span>
-    </div>
-  </div>
-</div>
-
 
     <!-- PROJECTS -->
     <section id="projects">
       <h2>Projects</h2>
       <p class="section-intro">
-        Selected analytics work across machine learning, Business Intelligence dashboards,
-        financial analysis and consumer/market insight projects.
+        A selection of analytics and Business Intelligence projects. Each card links to code notebooks and/or
+        PDF reports.
       </p>
 
-      <!-- MACHINE LEARNING & PREDICTIVE MODELLING -->
-      <h3 class="project-group-title">Machine Learning & Predictive Modelling</h3>
-      <div class="grid">
-        <div class="project-card">
-          <div>
-            <div class="project-title">Market Basket Analysis in 17 African Markets</div>
-            <div class="project-meta">Association rules · Retail demand · Multi-country</div>
+      <!-- Tabs -->
+      <div class="project-tabs">
+        <button class="project-tab active" data-filter="all">All</button>
+        <button class="project-tab" data-filter="ml">Machine Learning & Predictive Modelling</button>
+        <button class="project-tab" data-filter="bi">Business Intelligence & Dashboards</button>
+      </div>
+
+      <!-- Cards -->
+      <div class="project-grid">
+
+        <!-- Machine Learning: Market Basket -->
+        <article class="project-card" data-category="ml">
+          <img src="images/project-market-basket.jpg" alt="Market basket analysis visuals" class="project-image" />
+          <div class="project-body">
+            <div class="project-title">Market Basket Analysis in African Markets</div>
+            <div class="project-meta">Association rules · Segmentation · Retail demand</div>
             <p class="project-desc">
-              MSc research using survey data from 17 African markets to understand purchase patterns.
-              Applied Apriori and FP-Growth algorithms plus clustering to identify core vs discretionary
-              items and behavioural segments for retail and FMCG strategy.
+              MSc-level project using survey data from 17 African markets to identify frequently purchased item
+              combinations and consumer segments, supporting pricing and assortment decisions for FMCG and
+              retail clients.
             </p>
             <div class="project-tags">
-              <span>Python</span><span>Apriori</span><span>FP-Growth</span><span>Clustering</span><span>Retail</span>
+              <span>Python</span><span>Apriori</span><span>FP-Growth</span><span>Retail</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/sandraotieno/Market-Basket-Analysis-using-Apriori---FP-growth" target="_blank">
+                View code →
+              </a>
+              <a href="pdf/Market Basket Analysis using Apriori Algorithm.pdf" target="_blank">
+                View slides/report →
+              </a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/sandraotieno/Market-Basket-Analysis-using-Apriori---FP-growth" target="_blank">
-              View code on GitHub →
-            </a>
-            <a href="pdf/Market Basket Analysis using Apriori Algorithm.pdf" target="_blank">
-              Download slides/report →
-            </a>
-          </div>
-        </div>
+        </article>
 
-        <div class="project-card">
-          <div>
+        <!-- Machine Learning: Loan Credibility -->
+        <article class="project-card" data-category="ml">
+          <img src="images/project-loan-credit.jpg" alt="Credit modelling dashboard" class="project-image" />
+          <div class="project-body">
             <div class="project-title">Loan Credibility Prediction</div>
-            <div class="project-meta">Classification model · Credit risk</div>
+            <div class="project-meta">Credit risk · Classification</div>
             <p class="project-desc">
-              Built and evaluated models to predict loan credibility based on applicant and account
-              features, comparing algorithms and analysing feature importance for credit decision support.
+              Built classification models to predict loan credibility from customer and account features, compared
+              algorithms and evaluated how model outputs can support credit-decision and policy rules.
             </p>
             <div class="project-tags">
-              <span>Python</span><span>Scikit-Learn</span><span>Classification</span><span>Credit</span>
+              <span>Python</span><span>Scikit-Learn</span><span>Classification</span><span>Credit Risk</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/sandraotieno/Loan-Credibility-Prediction" target="_blank">View code →</a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/sandraotieno/Loan-Credibility-Prediction" target="_blank">View on GitHub →</a>
-          </div>
-        </div>
+        </article>
 
-        <div class="project-card">
-          <div>
+        <!-- Machine Learning: Credit Risk Modelling -->
+        <article class="project-card" data-category="ml">
+          <img src="images/project-credit-risk.jpg" alt="Risk modelling visuals" class="project-image" />
+          <div class="project-body">
             <div class="project-title">Credit Risk Modelling</div>
             <div class="project-meta">End-to-end modelling workflow</div>
             <p class="project-desc">
-              Extended credit risk modelling project covering data preparation, class imbalance handling,
-              logistic and tree-based models, evaluation metrics and interpretation of key risk drivers.
+              Extended credit risk project covering feature engineering, imbalance handling, logistic and tree-based
+              models, and interpretation of drivers that differentiate good vs. risky accounts.
             </p>
             <div class="project-tags">
-              <span>Python</span><span>Classification</span><span>Credit Risk</span>
+              <span>Python</span><span>Modelling</span><span>Risk</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/Credit_Risk_Modelling.ipynb" target="_blank">View notebook →</a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="projects/Credit_Risk_Modelling.ipynb" target="_blank">View notebook →</a>
-          </div>
-        </div>
+        </article>
 
-        <div class="project-card">
-          <div>
+        <!-- Machine Learning: Energy Demand -->
+        <article class="project-card" data-category="ml">
+          <img src="images/project-energy-forecast.jpg" alt="Energy demand charts" class="project-image" />
+          <div class="project-body">
             <div class="project-title">Energy Demand Prediction</div>
-          <div class="project-meta">Time-series / regression · Forecasting</div>
+            <div class="project-meta">Forecasting · Time series</div>
             <p class="project-desc">
-              Forecasted energy demand using historical consumption data. Includes feature engineering,
-              model comparison and error analysis to support capacity planning and cost management.
+              Forecasted energy demand using historical consumption data and regression models. Includes feature
+              engineering, model comparison and error analysis to support capacity and budgeting decisions.
             </p>
             <div class="project-tags">
-              <span>Python</span><span>Time Series</span><span>Regression</span><span>Forecasting</span>
+              <span>Python</span><span>Time Series</span><span>Forecasting</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/energy_demand_prediction.ipynb" target="_blank">View notebook →</a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="projects/energy_demand_prediction.ipynb" target="_blank">View notebook →</a>
-          </div>
-        </div>
-      </div>
+        </article>
 
-      <!-- BUSINESS INTELLIGENCE & DASHBOARDS -->
-      <h3 class="project-group-title">Business Intelligence & Dashboards</h3>
-      <div class="grid">
-        <div class="project-card">
-          <div>
+        <!-- BI: Energy Dashboard -->
+        <article class="project-card" data-category="bi">
+          <img src="images/project-energy-bi.jpg" alt="Power BI energy dashboard" class="project-image" />
+          <div class="project-body">
             <div class="project-title">Energy Consumption Dashboard</div>
-            <div class="project-meta">Power BI · Multi-city energy analytics</div>
+            <div class="project-meta">Power BI · City-level analytics</div>
             <p class="project-desc">
-              Power BI dashboard analysing energy consumption across major US cities, with drill-downs
-              by energy type, city and building. Includes trend analysis and cost comparisons to support
-              operational and budgeting decisions.
+              Power BI dashboard analysing energy consumption across major US cities with drill-downs by city,
+              energy type and building, highlighting trends, cost differences and optimisation levers.
             </p>
             <div class="project-tags">
               <span>Power BI</span><span>Dashboard</span><span>Energy Analytics</span>
             </div>
+            <div class="project-links">
+              <a href="pdf/Energy Dashboard.pdf" target="_blank">View dashboard (PDF) →</a>
+            </div>
           </div>
-          <div class="project-links">
-            <a href="pdf/Energy Dashboard.pdf" target="_blank">Download dashboard PDF →</a>
-          </div>
-        </div>
+        </article>
 
-        <div class="project-card">
-          <div>
-            <div class="project-title">Maintaining Relevance Amidst Inflationary Pressures</div>
-            <div class="project-meta">Tableau · Survey analytics · Retail & inflation</div>
+        <!-- BI: Inflation & Relevance -->
+        <article class="project-card" data-category="bi">
+          <img src="images/project-inflation-retail.jpg" alt="Retail and inflation dashboard" class="project-image" />
+          <div class="project-body">
+            <div class="project-title">Maintaining Relevance Amidst Inflation</div>
+            <div class="project-meta">Tableau · Consumer & retail analytics</div>
             <p class="project-desc">
-              Consumer analytics project using survey data from Nairobi shoppers to understand how
-              inflation and cost-of-living changes affect retail behaviour. Tableau dashboards explore spend,
-              channel shifts and trade-offs, with recommendations for pricing, pack sizes and promotions.
+              Survey-based analytics on how Nairobi shoppers adjust behaviour under inflation. Tableau dashboards
+              highlight shifts in spend, channels and categories, feeding recommendations on pricing, pack sizes and
+              customer engagement.
             </p>
             <div class="project-tags">
               <span>Tableau</span><span>Survey Data</span><span>Retail</span><span>Inflation</span>
             </div>
+            <div class="project-links">
+              <a href="pdf/Maintaining Relevance Amidst Inflationary Pressures.pdf" target="_blank">
+                View report (PDF) →
+              </a>
+            </div>
           </div>
-          <div class="project-links">
-            <a href="pdf/Maintaining Relevance Amidst Inflationary Pressures.pdf" target="_blank">
-              Download report (PDF) →
-            </a>
-          </div>
-        </div>
+        </article>
 
-        <div class="project-card">
-          <div>
-            <div class="project-title">Business Analytics Report</div>
-            <div class="project-meta">KPI analysis · Performance insights</div>
+        <!-- BI: Business Analytics Report -->
+        <article class="project-card" data-category="bi">
+          <img src="images/project-kpi-business.jpg" alt="Business KPI charts" class="project-image" />
+          <div class="project-body">
+            <div class="project-title">Business Analytics KPI Report</div>
+            <div class="project-meta">KPI analysis · Performance dashboards</div>
             <p class="project-desc">
-              Exploratory analysis on business KPIs, with visual summaries and commentary on growth,
-              risk and optimisation opportunities for decision makers.
+              Exploratory and KPI analysis on business performance with visual summaries highlighting growth,
+              risk and optimisation opportunities for decision-makers.
             </p>
             <div class="project-tags">
               <span>Python</span><span>EDA</span><span>Visualisation</span>
             </div>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/sandraotieno/Business-Analytics-Report" target="_blank">View on GitHub →</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div>
-            <div class="project-title">Movie Database Analytics</div>
-            <div class="project-meta">EDA · Feature relationships · Visualisation</div>
-            <p class="project-desc">
-              Cleaned and explored movie data to understand how genre, budget and ratings relate to
-              box office performance, using visual analysis and basic modelling.
-            </p>
-            <div class="project-tags">
-              <span>Python</span><span>EDA</span><span>Visualisation</span>
+            <div class="project-links">
+              <a href="https://github.com/sandraotieno/Business-Analytics-Report" target="_blank">
+                View code →
+              </a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/sandraotieno/Movie-Database" target="_blank">View on GitHub →</a>
-          </div>
-        </div>
-      </div>
+        </article>
 
-      <!-- RESEARCH, INSIGHT & FINANCIAL ANALYSIS -->
-      <h3 class="project-group-title">Consumer Insight, Outlook & Financial Analysis</h3>
-      <div class="grid">
-        <div class="project-card">
-          <div>
+        <!-- BI / Analytics: Consumer Outlook -->
+        <article class="project-card" data-category="bi">
+          <img src="images/project-consumer-outlook.jpg" alt="Consumer outlook visuals" class="project-image" />
+          <div class="project-body">
             <div class="project-title">Consumer Outlook & Sentiment</div>
-            <div class="project-meta">Survey analytics · Macroeconomic sentiment</div>
+            <div class="project-meta">Survey analytics · Economic sentiment</div>
             <p class="project-desc">
-              Analysed multi-wave consumer survey data to track expectations around inflation, jobs and
-              spending. Includes cleaning, feature engineering and cross-tab analysis by income, age and city.
+              Analysed multi-wave consumer survey data to track expectations around income, jobs and spending,
+              with cuts by income band, age and market, informing strategic scenarios for clients.
             </p>
             <div class="project-tags">
-              <span>Python</span><span>Survey Data</span><span>Visualisation</span>
+              <span>Python</span><span>Survey Analytics</span><span>Visualisation</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/Consumer Outlook.ipynb" target="_blank">View notebook →</a>
             </div>
           </div>
-          <div class="project-links">
-            <a href="projects/Consumer Outlook.ipynb" target="_blank">View notebook →</a>
-          </div>
-        </div>
+        </article>
 
-        <div class="project-card">
-          <div>
+        <!-- BI / Analytics: Jubilee Performance -->
+        <article class="project-card" data-category="bi">
+          <img src="images/project-financial-jubilee.jpg" alt="Financial performance charts" class="project-image" />
+          <div class="project-body">
             <div class="project-title">Financial Performance – Jubilee Insurance</div>
             <div class="project-meta">Financial analytics · Insurance KPIs</div>
             <p class="project-desc">
-              Analysed Jubilee Insurance financial performance using ratio analysis, trend charts and
-              profitability metrics. Highlighted premium growth, claims experience and cost structure
-              to support strategic discussions.
+              Analysed Jubilee Insurance performance using ratio and trend analysis to highlight premium
+              growth, claims experience and profitability drivers for strategic discussions.
             </p>
             <div class="project-tags">
               <span>Python</span><span>Financial Analysis</span><span>Insurance</span>
             </div>
+            <div class="project-links">
+              <a href="projects/Financial Performance - Jubilee Insurance.ipynb" target="_blank">
+                View notebook →
+              </a>
+            </div>
           </div>
-          <div class="project-links">
-            <a href="projects/Financial Performance - Jubilee Insurance.ipynb" target="_blank">
-              View notebook →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <!-- ARTICLES -->
-    <section id="articles">
-      <h2>Articles & Insight Pieces</h2>
-      <p class="section-intro">
-        Data-driven articles and reports on consumer behaviour, retail demand and analytics for
-        decision making. Some are in PDF format, others link to notebooks or external platforms.
-      </p>
-
-      <div class="article-item">
-        <a href="pdf/Market Basket Analysis using Apriori Algorithm.pdf" target="_blank">
-          <strong>Market Basket Analysis in Selected African Markets</strong> (PDF)
-        </a>
-        <span>
-          MSc research using association-rule mining and clustering to understand food purchase
-          patterns and resilience strategies across 17 African markets.
-        </span>
-      </div>
-
-      <div class="article-item">
-        <a href="pdf/Maintaining Relevance Amidst Inflationary Pressures.pdf" target="_blank">
-          <strong>Maintaining Relevance Amidst Inflationary Pressures</strong> (PDF)
-        </a>
-        <span>
-          Consumer survey–based analysis of how inflation affects purchasing behaviour in Nairobi
-          and the implications for retailers’ pricing, assortment and customer engagement.
-        </span>
-      </div>
-
-      <div class="article-item">
-        <a href="pdf/Energy Dashboard.pdf" target="_blank">
-          <strong>Energy Consumption Dashboard Report</strong> (PDF)
-        </a>
-        <span>
-          Summary of key trends and performance indicators from a Power BI dashboard on energy
-          consumption and costs across major US cities.
-        </span>
       </div>
     </section>
 
@@ -662,30 +794,121 @@
     <section id="contact">
       <h2>Contact</h2>
       <p class="section-intro">
-        Open to opportunities in data analytics, Business Intelligence, insight generation and
-        decision-support roles, as well as consulting engagements.
+        Open to opportunities in data analytics, Business Intelligence and insight-driven roles, as well as
+        consulting engagements.
       </p>
 
-      <div class="card" style="max-width:480px;">
-        <p style="font-size:14px;">
-          📍 Nairobi, Kenya<br>
-          📧 Email: <a href="mailto:sandrabeldine@gmail.com">sandrabeldine@gmail.com</a><br>
-          🔗 LinkedIn:
-          <a href="https://www.linkedin.com/in/sandra-beldine-otieno-msc-5896a0199" target="_blank">
-            Sandra Beldine Otieno
-          </a><br>
-          💻 GitHub: <a href="https://github.com/sandraotieno" target="_blank">github.com/sandraotieno</a>
-        </p>
+      <div class="contact-layout">
+        <!-- Left: icons -->
+        <div class="card">
+          <ul class="contact-icons-list">
+            <li>
+              <span class="icon-circle">
+                <!-- location icon -->
+                <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              </span>
+              Nairobi, Kenya
+            </li>
+            <li>
+              <span class="icon-circle">
+                <!-- email icon -->
+                <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.01L12 13l8-6.99V6H4zm0 12h16V9l-8 7-8-7v9z"/></svg>
+              </span>
+              <a href="mailto:sandrabeldine@gmail.com">sandrabeldine@gmail.com</a>
+            </li>
+            <li>
+              <span class="icon-circle">
+                <!-- LinkedIn -->
+                <svg viewBox="0 0 24 24"><path d="M6.5 6.5A2.5 2.5 0 1 1 4 4a2.5 2.5 0 0 1 2.5 2.5zM4 9h5v11H4zM14 9h3.6A3.4 3.4 0 0 1 21 12.4V20h-4v-6.2c0-1.2-.7-1.9-1.7-1.9-1 0-1.8.7-1.8 1.9V20h-4V9h3.5v1.5A3.5 3.5 0 0 1 14 9z"/></svg>
+              </span>
+              <a href="https://www.linkedin.com/in/sandra-beldine-otieno-msc-5896a0199" target="_blank">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <span class="icon-circle">
+                <!-- GitHub -->
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.7.6-3.3-1.3-3.3-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.7-1.4-2.2-.3-4.5-1.1-4.5-5A3.9 3.9 0 0 1 7 8.1 3.6 3.6 0 0 1 7.1 5s.8-.2 2.6 1a9 9 0 0 1 4.6 0c1.8-1.2 2.6-1 2.6-1a3.6 3.6 0 0 1 .1 3.1 3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.5 5 .4.4.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
+              </span>
+              <a href="https://github.com/sandraotieno" target="_blank">github.com/sandraotieno</a>
+            </li>
+          </ul>
+          <div class="view-counter" id="view-counter">
+            Views: …
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="card">
+          <form class="contact-form" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="message">Enquiry</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send enquiry</button>
+          </form>
+          <p class="view-counter">
+            This form is static-site ready. You can wire it to Netlify Forms, Formspree or any email form service.
+          </p>
+        </div>
       </div>
     </section>
 
     <footer>
-      © <span id="year"></span> Sandra Beldine Otieno · Data Analytics & Business Intelligence
+      © <span id="year"></span> Sandra Beldine Otieno · Data Analytics & Business Intelligence Portfolio
     </footer>
   </div>
 
+  <!-- ------------ SCRIPTS ------------ -->
   <script>
+    // rotating hero text: Data Analytics → Business Intelligence → Insight Generation
+    const rotatingEl = document.getElementById('hero-rotating');
+    const rotatingWords = ['Data Analytics', 'Business Intelligence', 'Insight Generation'];
+    let rotatingIndex = 0;
+    setInterval(() => {
+      rotatingIndex = (rotatingIndex + 1) % rotatingWords.length;
+      rotatingEl.textContent = rotatingWords[rotatingIndex];
+    }, 2600);
+
+    // projects filter
+    const tabs = document.querySelectorAll('.project-tab');
+    const cards = document.querySelectorAll('.project-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        cards.forEach(card => {
+          const cat = card.dataset.category;
+          card.style.display = (filter === 'all' || filter === cat) ? 'flex' : 'none';
+        });
+      });
+    });
+
+    // footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple view counter using countapi (free service)
+    // You can replace this with Google Analytics if you prefer.
+    fetch('https://api.countapi.xyz/hit/sandraotieno-portfolio/views')
+      .then(res => res.json())
+      .then(data => {
+        const vc = document.getElementById('view-counter');
+        if (vc && data && data.value !== undefined) {
+          vc.textContent = 'Views: ' + data.value;
+        }
+      })
+      .catch(() => {
+        const vc = document.getElementById('view-counter');
+        if (vc) vc.textContent = 'Views: (tracking active)';
+      });
   </script>
 </body>
 </html>
