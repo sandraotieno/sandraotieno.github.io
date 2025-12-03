@@ -1,1 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects – Sandra Beldine Otieno</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Project portfolio of Sandra Beldine Otieno, covering data analytics, business intelligence dashboards, SQL and data engineering work." />
+
+  <style>
+    :root {
+      --bg-page: #020617;
+      --bg-shell: #020617;
+      --bg-card: #020617;
+      --accent-main: #f9fafb;
+      --accent-soft: #9ca3af;
+      --border-subtle: #1f2937;
+      --accent-primary: #60a5fa;
+      --shadow-soft: 0 32px 70px rgba(0,0,0,0.8);
+      --radius-card: 22px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Avenir Next", "Avenir", system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 50%, #000 100%);
+      color: var(--accent-main);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    a { color: var(--accent-primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page-shell {
+      max-width: 1170px;
+      margin: 32px auto 64px;
+      padding: 30px 26px 40px;
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.25), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(56,189,248,0.25), transparent 60%),
+        var(--bg-shell);
+      border-radius: 30px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148,163,184,0.35);
+    }
+
+    /* HEADER & NAV */
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .brand-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .brand-tagline {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+    }
+
+    .brand {
+      font-size: 20px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-main);
+      margin-bottom: 10px;
+    }
+
+    .nav-links a {
+      margin-left: 22px;
+      font-size: 14px;
+      color: var(--accent-soft);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .nav-links a { margin: 0; }
+    }
+
+    /* CONTENT */
+
+    main section {
+      margin-bottom: 36px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      font-size: 14px;
+      color: var(--accent-soft);
+      margin-bottom: 18px;
+      max-width: 780px;
+    }
+
+    /* TABS & GRID */
+
+    .project-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .project-tab {
+      border-radius: 999px;
+      padding: 7px 16px;
+      font-size: 12px;
+      border: 1px solid var(--border-subtle);
+      background: #020617;
+      color: var(--accent-soft);
+      cursor: pointer;
+    }
+
+    .project-tab.active {
+      background: var(--accent-primary);
+      color: #0b1120;
+      border-color: var(--accent-primary);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .project-body {
+      padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .project-meta {
+      font-size: 12px;
+      color: var(--accent-primary);
+      margin-bottom: 6px;
+    }
+
+    .project-desc {
+      font-size: 13px;
+      color: var(--accent-soft);
+      margin-bottom: 8px;
+      flex-grow: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+
+    .project-tags span {
+      font-size: 10px;
+      border-radius: 999px;
+      padding: 3px 7px;
+      background: #0f172a;
+      color: #e5e7eb;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .project-links a {
+      font-size: 11px;
+      margin-right: 10px;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: var(--accent-soft);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <!-- HEADER -->
+    <header>
+      <div class="brand-wrapper">
+        <div class="brand-tagline">DATA ANALYTICS PORTFOLIO</div>
+        <div class="brand">SANDRA B. OTIENO</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Projects</h1>
+        <p class="section-intro">
+          A selection of work across data analytics, Business Intelligence and SQL/data engineering. Each
+          project moves from raw data through modelling or transformation to dashboards, reports or
+          decision-ready insight.
+        </p>
+
+        <!-- FILTER TABS -->
+        <div class="project-tabs">
+          <button class="project-tab active" data-filter="all">All Work</button>
+          <button class="project-tab" data-filter="analytics">Data Analytics &amp; Modelling</button>
+          <button class="project-tab" data-filter="bi">Business Intelligence &amp; Dashboards</button>
+          <button class="project-tab" data-filter="sql">SQL &amp; Data Engineering</button>
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div class="project-grid">
+          <!-- Market Basket Analysis -->
+          <article class="project-card" data-category="analytics insight">
+            <img src="images/project-market-basket.jpg" alt="Market basket analysis" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Market Basket Analysis in African Markets</div>
+              <div class="project-meta">Association rules · Multi-market survey data</div>
+              <p class="project-desc">
+                MSc project using survey data from 17 African markets to identify frequently purchased
+                item combinations and consumer segments, supporting assortment, promotion and pricing
+                decisions for FMCG and retail clients.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>Apriori</span><span>FP-Growth</span><span>Retail</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sandraotieno/Market-Basket-Analysis-using-Apriori---FP-growth" target="_blank">
+                  View code →
+                </a>
+                <a href="pdf/Market Basket Analysis using Apriori Algorithm.pdf" target="_blank">
+                  View report (PDF) →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Loan Credibility Prediction -->
+          <article class="project-card" data-category="analytics sql">
+            <img src="images/project-loan-credit.jpg" alt="Loan credibility modelling" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Loan Credibility Prediction</div>
+              <div class="project-meta">Credit risk · Classification models</div>
+              <p class="project-desc">
+                End-to-end credit scoring workflow using customer and account features. Includes feature
+                engineering, model comparison and interpretation of factors that differentiate credible
+                from non-credible applications.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>Scikit-Learn</span><span>Classification</span><span>Credit Risk</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sandraotieno/Loan-Credibility-Prediction" target="_blank">View code →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Credit Risk Modelling -->
+          <article class="project-card" data-category="analytics sql">
+            <img src="images/project-credit-risk.jpg" alt="Credit risk charts" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Credit Risk Modelling</div>
+              <div class="project-meta">Risk analytics · Modelling workflow</div>
+              <p class="project-desc">
+                Credit risk modelling project covering data preparation, imbalance handling, logistic and
+                tree-based models, and interpretation of key drivers behind default risk.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>Risk</span><span>Modelling</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/Credit_Risk_Modelling.ipynb" target="_blank">View notebook →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Energy Demand Prediction -->
+          <article class="project-card" data-category="analytics">
+            <img src="images/project-energy-forecast.jpg" alt="Energy demand forecast" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Energy Demand Prediction</div>
+              <div class="project-meta">Forecasting · Time series</div>
+              <p class="project-desc">
+                Forecasted energy demand using historical consumption and weather-like drivers, comparing
+                regression and time-series approaches to inform capacity planning and cost management.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>Time Series</span><span>Forecasting</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/energy_demand_prediction.ipynb" target="_blank">View notebook →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Movie Database / SQL Analytics -->
+          <article class="project-card" data-category="analytics sql">
+            <img src="images/project-movie-sql.jpg" alt="Movie data analysis" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Movie Database Analytics (SQL)</div>
+              <div class="project-meta">SQL · Exploratory analytics</div>
+              <p class="project-desc">
+                Analysed movie data to understand how genre, budget, runtime and ratings relate to box
+                office performance using SQL queries and visual summaries, supporting portfolio and
+                pricing decisions.
+              </p>
+              <div class="project-tags">
+                <span>SQL</span><span>EDA</span><span>Visualisation</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sandraotieno/Movie-Database" target="_blank">View project →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Consumer Outlook & Sentiment -->
+          <article class="project-card" data-category="analytics insight">
+            <img src="images/project-consumer-outlook.jpg" alt="Consumer outlook charts" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Consumer Outlook & Sentiment Tracking</div>
+              <div class="project-meta">Survey analytics · Economic sentiment</div>
+              <p class="project-desc">
+                Multi-wave consumer survey analysis tracking expectations around income, employment and
+                spending, with cuts by income band, age and market to support scenario planning for
+                clients in inflationary periods.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>Survey Analytics</span><span>Visualisation</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/Consumer Outlook.ipynb" target="_blank">View notebook →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Jubilee Financial Performance -->
+          <article class="project-card" data-category="analytics insight">
+            <img src="images/project-financial-jubilee.jpg" alt="Financial performance dashboard" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Financial Performance – Jubilee Insurance</div>
+              <div class="project-meta">Financial analytics · Insurance KPIs</div>
+              <p class="project-desc">
+                Analysed Jubilee Insurance performance using ratio and trend analysis, highlighting premium
+                growth, claims experience, profitability drivers and implications for strategic positioning.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>Financial Analysis</span><span>Insurance</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/Financial Performance - Jubilee Insurance.ipynb" target="_blank">
+                  View notebook →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Energy Dashboard (BI) -->
+          <article class="project-card" data-category="bi sql">
+            <img src="images/project-energy-bi.jpg" alt="Power BI energy dashboard" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Energy Consumption Dashboard</div>
+              <div class="project-meta">Business intelligence · Power BI</div>
+              <p class="project-desc">
+                Power BI dashboard analysing energy consumption across major US cities with drill-downs by
+                city, energy type and building, highlighting trends, cost differences and optimisation
+                levers for decision-makers.
+              </p>
+              <div class="project-tags">
+                <span>Power BI</span><span>DAX</span><span>Power Query</span><span>Energy Analytics</span>
+              </div>
+              <div class="project-links">
+                <a href="pdf/Energy Dashboard.pdf" target="_blank">View dashboard (PDF) →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Maintaining Relevance Amidst Inflation -->
+          <article class="project-card" data-category="bi insight">
+            <img src="images/project-inflation-retail.jpg" alt="Inflation and retail" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Maintaining Relevance Amidst Inflation</div>
+              <div class="project-meta">Tableau · Consumer & retail analytics</div>
+              <p class="project-desc">
+                Survey-based analytics on how Nairobi shoppers adjust behaviour under inflation. Tableau
+                dashboards highlight shifts in spend, channels and categories, feeding recommendations on
+                pricing, pack sizes and customer engagement.
+              </p>
+              <div class="project-tags">
+                <span>Tableau</span><span>Survey Data</span><span>Retail</span><span>Inflation</span>
+              </div>
+              <div class="project-links">
+                <a href="pdf/Maintaining Relevance Amidst Inflationary Pressures.pdf" target="_blank">
+                  View report (PDF) →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Business Analytics Report -->
+          <article class="project-card" data-category="analytics insight">
+            <img src="images/project-kpi-business.jpg" alt="Business KPI visuals" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">Business Analytics Report</div>
+              <div class="project-meta">Performance analytics · KPI views</div>
+              <p class="project-desc">
+                Exploratory and performance analysis on business metrics with visual summaries highlighting
+                growth, risk and optimisation opportunities for management teams.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>EDA</span><span>Visualisation</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sandraotieno/Business-Analytics-Report" target="_blank">
+                  View code →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ETL / ELT & Data Modelling Mini-project (summary of skills) -->
+          <article class="project-card" data-category="sql bi">
+            <img src="images/project-etl-pipeline.jpg" alt="ETL pipeline visual" class="project-image" />
+            <div class="project-body">
+              <div class="project-title">SQL & ETL/ELT Modelling Work</div>
+              <div class="project-meta">Data engineering-adjacent · BI data models</div>
+              <p class="project-desc">
+                Portfolio of SQL and ETL/ELT exercises including building star-schema style models for BI,
+                transforming raw tables with dbt, and preparing Snowflake-ready datasets for dashboards and
+                reporting layers.
+              </p>
+              <div class="project-tags">
+                <span>SQL</span><span>ETL / ELT</span><span>dbt</span><span>Snowflake</span><span>Data Modelling</span>
+              </div>
+              <div class="project-links">
+                <!-- update this link when you create a dedicated repo or folder -->
+                <a href="https://github.com/sandraotieno" target="_blank">View SQL & ETL work →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2024 Sandra Beldine Otieno · Data Analytics Portfolio
+    </footer>
+  </div>
+
+  <script>
+    // Project filtering logic
+    const tabs = document.querySelectorAll('.project-tab');
+    const cards = document.querySelectorAll('.project-card');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+
+        cards.forEach(card => {
+          const categories = card.dataset.category.split(' ');
+          const show = filter === 'all' || categories.includes(filter);
+          card.style.display = show ? 'flex' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
 
