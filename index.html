@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sandra Beldine Otieno | Data Analytics Portfolio</title>
+  <title>Sandra Beldine Otieno | Data Analytics & Business Intelligence Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --bg: #0b1020;
-      --card: #161b2c;
-      --accent: #4ea8de;
-      --accent-soft: rgba(78,168,222,0.15);
-      --text-main: #f5f7ff;
-      --text-muted: #a8b2d1;
+      --bg: #f5f7fb;
+      --bg-alt: #ffffff;
+      --card: #ffffff;
+      --accent: #0f766e;           /* teal */
+      --accent-soft: rgba(15, 118, 110, 0.08);
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #151a30 0, #050814 55%, #020308 100%);
+      background: radial-gradient(circle at top, #e0f2fe 0, #f5f7fb 45%, #f3f4f6 100%);
       color: var(--text-main);
       line-height: 1.6;
     }
@@ -24,7 +26,7 @@
     a:hover { text-decoration: underline; }
 
     .wrapper {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 32px 16px 64px;
     }
@@ -64,21 +66,22 @@
     }
 
     .hero-title {
-      font-size: 36px;
+      font-size: 34px;
+      font-weight: 700;
       margin-bottom: 8px;
     }
     .hero-subtitle {
-      font-size: 18px;
+      font-size: 16px;
       color: var(--accent);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-    .hero-text { color: var(--text-muted); margin-bottom: 20px; }
+    .hero-text { color: var(--text-muted); margin-bottom: 18px; }
 
     .hero-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
     .tag {
       border-radius: 999px;
@@ -97,23 +100,25 @@
       border-radius: 999px;
       border: 1px solid var(--accent);
       color: var(--accent);
+      background: #ffffff;
+      transition: all 0.1s ease-out;
     }
     .hero-actions a.primary {
       background: var(--accent);
-      color: #020308;
+      color: #ffffff;
       font-weight: 600;
     }
     .hero-actions a:hover {
-      filter: brightness(1.05);
+      filter: brightness(1.04);
       transform: translateY(-1px);
     }
 
     .hero-card {
-      background: linear-gradient(145deg, #151a30, #101425);
+      background: var(--bg-alt);
       border-radius: 18px;
       padding: 22px 22px 18px;
-      border: 1px solid rgba(255,255,255,0.05);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
     }
     .hero-card h3 {
       font-size: 16px;
@@ -127,7 +132,7 @@
     }
     .hero-metric {
       flex: 1 1 110px;
-      background: #0f1322;
+      background: #ecfdf5;
       border-radius: 12px;
       padding: 10px 12px;
     }
@@ -149,7 +154,7 @@
     }
     section h2 {
       font-size: 22px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     section p.section-intro {
       font-size: 14px;
@@ -170,7 +175,8 @@
       background: var(--card);
       border-radius: 16px;
       padding: 18px 18px 16px;
-      border: 1px solid rgba(255,255,255,0.04);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
     }
 
     .skills-list {
@@ -183,23 +189,30 @@
       font-size: 12px;
       padding: 6px 10px;
       border-radius: 999px;
-      background: #0f1322;
-      color: var(--text-muted);
+      background: #e0f2fe;
+      color: #1f2933;
+    }
+
+    .project-group-title {
+      font-size: 17px;
+      margin: 22px 0 8px;
+      color: #111827;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 18px;
     }
     .project-card {
       background: var(--card);
       border-radius: 16px;
       padding: 16px 16px 14px;
-      border: 1px solid rgba(255,255,255,0.04);
+      border: 1px solid var(--border-subtle);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
     }
     .project-title {
       font-size: 16px;
@@ -223,8 +236,8 @@
     }
     .project-tags span {
       font-size: 11px;
-      background: #0f1322;
-      color: var(--text-muted);
+      background: #e0f2fe;
+      color: #1f2933;
       padding: 4px 8px;
       border-radius: 999px;
     }
@@ -236,8 +249,8 @@
     .article-item {
       padding: 12px 14px;
       border-radius: 12px;
-      background: #101426;
-      border: 1px solid rgba(255,255,255,0.03);
+      background: #ecfdf5;
+      border: 1px solid var(--border-subtle);
       margin-bottom: 10px;
       font-size: 13px;
     }
@@ -258,7 +271,7 @@
 <body>
   <div class="wrapper">
     <header>
-      <div class="brand">SANDRA OTIENO</div>
+      <div class="brand">SANDRA OT IENO</div>
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -270,17 +283,19 @@
     <!-- HERO -->
     <section class="hero">
       <div>
-        <h1 class="hero-title">Data Analytics & Business Intelligence Portfolio</h1>
+        <h1 class="hero-title">Data Analytics, Business Intelligence & Insight Storytelling</h1>
         <p class="hero-subtitle">Sandra Beldine Otieno · Nairobi, Kenya</p>
         <p class="hero-text">
-          I am a data analytics professional who transforms complex, multi-country datasets into
-          clear, actionable insights. I work across business intelligence, predictive analytics and
-          consumer & market insights to support evidence-based decisions for organisations in Africa.
+          I am a data analytics and <strong>Business Intelligence</strong> professional who turns complex,
+          multi-market datasets into clear, decision-ready insight. I specialise in data analysis,
+          Business Intelligence development and insight generation for organisations in retail,
+          financial services, FMCG and development sectors across African markets.
         </p>
         <div class="hero-tags">
           <div class="tag">Data Analytics</div>
           <div class="tag">Business Intelligence</div>
-          <div class="tag">Consumer Insights</div>
+          <div class="tag">Predictive Modelling</div>
+          <div class="tag">Data Storytelling & Insight Generation</div>
           <div class="tag">Python · SQL · Power BI</div>
         </div>
         <div class="hero-actions">
@@ -298,53 +313,69 @@
             <strong>6+ yrs</strong>
           </div>
           <div class="hero-metric">
-            <span>Key Focus</span>
-            <strong>Analytics & BI</strong>
+            <span>Focus</span>
+            <strong>Analytics & Business Intelligence</strong>
           </div>
           <div class="hero-metric">
-            <span>Regions</span>
+            <span>Markets</span>
             <strong>20+ African Mkts</strong>
           </div>
         </div>
         <p class="hero-note">
-          Skilled in data modelling, dashboarding, forecasting and insight generation across retail,
-          FMCG, financial services and development sectors.
+          I work across the analytics lifecycle: data preparation, modelling, Business Intelligence
+          dashboards and executive-ready insight stories.
         </p>
       </div>
     </section>
 
-    <!-- ABOUT + SKILLS -->
+    <!-- ABOUT & SKILLS -->
     <section id="about">
       <h2>About & Skills</h2>
       <p class="section-intro">
-        My work sits at the intersection of data analytics, BI development and market/consumer insight.
-        I am comfortable moving from raw data to analytical models, dashboards and decision-ready stories.
+        My work sits at the intersection of data analytics, Business Intelligence development and
+        market/consumer insight generation.
       </p>
 
       <div class="two-col">
         <div class="card">
           <h3>About Me</h3>
           <p style="font-size:14px; color: var(--text-muted); margin-top:8px;">
-            I have a background in <strong>Data Science & Analytics</strong> and over six years of
-            experience working with multi-country data across African markets. I enjoy cleaning and
-            structuring datasets, exploring patterns, building models, and explaining what the numbers
-            mean for real decisions – whether for banks, FMCG brands, retailers or development actors.
+            I have a background in <strong>Data Science & Analytics</strong> and more than six years of
+            experience working with multi-country datasets. I enjoy cleaning and structuring data,
+            designing analytical models, building dashboards and explaining what the results mean for
+            growth, risk and operational decisions.
           </p>
         </div>
+
         <div class="card">
           <h3>Core Skills</h3>
           <div class="skills-list">
-            <span>Python (Pandas, NumPy, Scikit-Learn)</span>
-            <span>SQL</span>
-            <span>Power BI</span>
-            <span>Tableau</span>
-            <span>Advanced Excel</span>
-            <span>Data Cleaning & Prep</span>
-            <span>EDA & Statistical Analysis</span>
-            <span>Forecasting & Modelling</span>
+            <span>Data Cleaning & Preparation</span>
+            <span>Exploratory Data Analysis (EDA)</span>
+            <span>Predictive Modelling</span>
             <span>Segmentation & Behavioural Analytics</span>
+            <span>Time Series & Forecasting</span>
             <span>Dashboard Design</span>
-            <span>Insight Reporting & Storytelling</span>
+            <span>Data Storytelling & Insight Generation</span>
+            <span>Executive Reporting</span>
+          </div>
+
+          <h3 style="margin-top:16px;font-size:14px;">Business Intelligence & Tools</h3>
+          <div class="skills-list">
+            <span>SQL (PostgreSQL, MySQL)</span>
+            <span>Power BI (DAX, Power Query)</span>
+            <span>Tableau</span>
+            <span>Looker Studio</span>
+            <span>Python (Pandas, NumPy, Scikit-Learn)</span>
+            <span>R (Tidyverse)</span>
+            <span>Excel (Advanced)</span>
+            <span>SPSS</span>
+            <span>Stata</span>
+            <span>Jupyter Notebook</span>
+            <span>Git & GitHub</span>
+            <span>Snowflake (learning)</span>
+            <span>Databricks (learning)</span>
+            <span>dbt (learning)</span>
           </div>
         </div>
       </div>
@@ -354,39 +385,43 @@
     <section id="projects">
       <h2>Projects</h2>
       <p class="section-intro">
-        A selection of analytics projects. Each project links to the full notebook or repository on GitHub.
-        To add a new project, duplicate one of the cards below and update the title, description and links.
+        Selected analytics work across machine learning, Business Intelligence dashboards,
+        financial analysis and consumer/market insight projects.
       </p>
 
+      <!-- MACHINE LEARNING & PREDICTIVE MODELLING -->
+      <h3 class="project-group-title">Machine Learning & Predictive Modelling</h3>
       <div class="grid">
-        <!-- PROJECT 1 -->
         <div class="project-card">
           <div>
-            <div class="project-title">Market Basket Analysis using Apriori & FP-Growth</div>
-            <div class="project-meta">Association rules · Retail demand · Multi-country data</div>
+            <div class="project-title">Market Basket Analysis in 17 African Markets</div>
+            <div class="project-meta">Association rules · Retail demand · Multi-country</div>
             <p class="project-desc">
-              Analysed purchase combinations and basket structures across African markets using
-              Apriori and FP-Growth to identify core vs discretionary items and resilience strategies
-              under cost-of-living pressure.
+              MSc research using survey data from 17 African markets to understand purchase patterns.
+              Applied Apriori and FP-Growth algorithms plus clustering to identify core vs discretionary
+              items and behavioural segments for retail and FMCG strategy.
             </p>
             <div class="project-tags">
-              <span>Python</span><span>Apriori</span><span>FP-Growth</span><span>Retail</span>
+              <span>Python</span><span>Apriori</span><span>FP-Growth</span><span>Clustering</span><span>Retail</span>
             </div>
           </div>
           <div class="project-links">
-            <a href="https://github.com/sandraotieno/Market-Basket-Analysis-using-Apriori---FP-growth" target="_blank">View on GitHub →</a>
+            <a href="https://github.com/sandraotieno/Market-Basket-Analysis-using-Apriori---FP-growth" target="_blank">
+              View code on GitHub →
+            </a>
+            <a href="pdf/Market Basket Analysis using Apriori Algorithm.pdf" target="_blank">
+              Download slides/report →
+            </a>
           </div>
         </div>
 
-        <!-- PROJECT 2 -->
         <div class="project-card">
           <div>
             <div class="project-title">Loan Credibility Prediction</div>
             <div class="project-meta">Classification model · Credit risk</div>
             <p class="project-desc">
               Built and evaluated models to predict loan credibility based on applicant and account
-              features, comparing different algorithms and analysing feature importance for credit
-              decision support.
+              features, comparing algorithms and analysing feature importance for credit decision support.
             </p>
             <div class="project-tags">
               <span>Python</span><span>Scikit-Learn</span><span>Classification</span><span>Credit</span>
@@ -397,14 +432,89 @@
           </div>
         </div>
 
-        <!-- PROJECT 3 -->
+        <div class="project-card">
+          <div>
+            <div class="project-title">Credit Risk Modelling</div>
+            <div class="project-meta">End-to-end modelling workflow</div>
+            <p class="project-desc">
+              Extended credit risk modelling project covering data preparation, class imbalance handling,
+              logistic and tree-based models, evaluation metrics and interpretation of key risk drivers.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Classification</span><span>Credit Risk</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="projects/Credit_Risk_Modelling.ipynb" target="_blank">View notebook →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-title">Energy Demand Prediction</div>
+          <div class="project-meta">Time-series / regression · Forecasting</div>
+            <p class="project-desc">
+              Forecasted energy demand using historical consumption data. Includes feature engineering,
+              model comparison and error analysis to support capacity planning and cost management.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Time Series</span><span>Regression</span><span>Forecasting</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="projects/energy_demand_prediction.ipynb" target="_blank">View notebook →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUSINESS INTELLIGENCE & DASHBOARDS -->
+      <h3 class="project-group-title">Business Intelligence & Dashboards</h3>
+      <div class="grid">
+        <div class="project-card">
+          <div>
+            <div class="project-title">Energy Consumption Dashboard</div>
+            <div class="project-meta">Power BI · Multi-city energy analytics</div>
+            <p class="project-desc">
+              Power BI dashboard analysing energy consumption across major US cities, with drill-downs
+              by energy type, city and building. Includes trend analysis and cost comparisons to support
+              operational and budgeting decisions.
+            </p>
+            <div class="project-tags">
+              <span>Power BI</span><span>Dashboard</span><span>Energy Analytics</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="pdf/Energy Dashboard.pdf" target="_blank">Download dashboard PDF →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-title">Maintaining Relevance Amidst Inflationary Pressures</div>
+            <div class="project-meta">Tableau · Survey analytics · Retail & inflation</div>
+            <p class="project-desc">
+              Consumer analytics project using survey data from Nairobi shoppers to understand how
+              inflation and cost-of-living changes affect retail behaviour. Tableau dashboards explore spend,
+              channel shifts and trade-offs, with recommendations for pricing, pack sizes and promotions.
+            </p>
+            <div class="project-tags">
+              <span>Tableau</span><span>Survey Data</span><span>Retail</span><span>Inflation</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="pdf/Maintaining Relevance Amidst Inflationary Pressures.pdf" target="_blank">
+              Download report (PDF) →
+            </a>
+          </div>
+        </div>
+
         <div class="project-card">
           <div>
             <div class="project-title">Business Analytics Report</div>
             <div class="project-meta">KPI analysis · Performance insights</div>
             <p class="project-desc">
-              Conducted exploratory analysis on business KPIs, building visual summaries and
-              identifying growth, risk and optimisation opportunities for decision makers.
+              Exploratory analysis on business KPIs, with visual summaries and commentary on growth,
+              risk and optimisation opportunities for decision makers.
             </p>
             <div class="project-tags">
               <span>Python</span><span>EDA</span><span>Visualisation</span>
@@ -415,14 +525,13 @@
           </div>
         </div>
 
-        <!-- PROJECT 4 -->
         <div class="project-card">
           <div>
             <div class="project-title">Movie Database Analytics</div>
             <div class="project-meta">EDA · Feature relationships · Visualisation</div>
             <p class="project-desc">
-              Cleaned and explored movie data to understand how factors like genre, budget and
-              ratings relate to box office performance, using visual analysis and basic modelling.
+              Cleaned and explored movie data to understand how genre, budget and ratings relate to
+              box office performance, using visual analysis and basic modelling.
             </p>
             <div class="project-tags">
               <span>Python</span><span>EDA</span><span>Visualisation</span>
@@ -432,25 +541,47 @@
             <a href="https://github.com/sandraotieno/Movie-Database" target="_blank">View on GitHub →</a>
           </div>
         </div>
+      </div>
 
-        <!-- COPY FROM HERE TO ADD A NEW PROJECT
+      <!-- RESEARCH, INSIGHT & FINANCIAL ANALYSIS -->
+      <h3 class="project-group-title">Consumer Insight, Outlook & Financial Analysis</h3>
+      <div class="grid">
         <div class="project-card">
           <div>
-            <div class="project-title">PROJECT TITLE</div>
-            <div class="project-meta">Short meta text · domain</div>
+            <div class="project-title">Consumer Outlook & Sentiment</div>
+            <div class="project-meta">Survey analytics · Macroeconomic sentiment</div>
             <p class="project-desc">
-              Brief description of the project, what data you used, what analysis or models you
-              applied, and the type of insight or decision it supports.
+              Analysed multi-wave consumer survey data to track expectations around inflation, jobs and
+              spending. Includes cleaning, feature engineering and cross-tab analysis by income, age and city.
             </p>
             <div class="project-tags">
-              <span>Tool</span><span>Method</span><span>Domain</span>
+              <span>Python</span><span>Survey Data</span><span>Visualisation</span>
             </div>
           </div>
           <div class="project-links">
-            <a href="GITHUB_LINK_HERE" target="_blank">View on GitHub →</a>
+            <a href="projects/Consumer Outlook.ipynb" target="_blank">View notebook →</a>
           </div>
         </div>
-        END COPY BLOCK -->
+
+        <div class="project-card">
+          <div>
+            <div class="project-title">Financial Performance – Jubilee Insurance</div>
+            <div class="project-meta">Financial analytics · Insurance KPIs</div>
+            <p class="project-desc">
+              Analysed Jubilee Insurance financial performance using ratio analysis, trend charts and
+              profitability metrics. Highlighted premium growth, claims experience and cost structure
+              to support strategic discussions.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Financial Analysis</span><span>Insurance</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="projects/Financial Performance - Jubilee Insurance.ipynb" target="_blank">
+              View notebook →
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -458,28 +589,46 @@
     <section id="articles">
       <h2>Articles & Insight Pieces</h2>
       <p class="section-intro">
-        Space for data-driven articles and thought pieces on consumer behaviour, retail demand,
-        analytics and decision intelligence. You can link to PDFs, Google Docs, Medium or LinkedIn posts.
+        Data-driven articles and reports on consumer behaviour, retail demand and analytics for
+        decision making. Some are in PDF format, others link to notebooks or external platforms.
       </p>
 
       <div class="article-item">
-        <a href="#" target="_blank"><strong>[Coming soon]</strong> Using market basket analysis to understand African consumer resilience</a>
-        <span>Analytical commentary on how cost-of-living changes shape retail baskets and brand strategy.</span>
+        <a href="pdf/Market Basket Analysis using Apriori Algorithm.pdf" target="_blank">
+          <strong>Market Basket Analysis in Selected African Markets</strong> (PDF)
+        </a>
+        <span>
+          MSc research using association-rule mining and clustering to understand food purchase
+          patterns and resilience strategies across 17 African markets.
+        </span>
       </div>
 
       <div class="article-item">
-        <a href="#" target="_blank"><strong>[Coming soon]</strong> Turning multi-country survey data into executive-ready dashboards</a>
-        <span>Practical guide on structuring, modelling and visualising data for decision makers.</span>
+        <a href="pdf/Maintaining Relevance Amidst Inflationary Pressures.pdf" target="_blank">
+          <strong>Maintaining Relevance Amidst Inflationary Pressures</strong> (PDF)
+        </a>
+        <span>
+          Consumer survey–based analysis of how inflation affects purchasing behaviour in Nairobi
+          and the implications for retailers’ pricing, assortment and customer engagement.
+        </span>
       </div>
 
-      <!-- Add more article blocks here when you publish new pieces -->
+      <div class="article-item">
+        <a href="pdf/Energy Dashboard.pdf" target="_blank">
+          <strong>Energy Consumption Dashboard Report</strong> (PDF)
+        </a>
+        <span>
+          Summary of key trends and performance indicators from a Power BI dashboard on energy
+          consumption and costs across major US cities.
+        </span>
+      </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
       <h2>Contact</h2>
       <p class="section-intro">
-        Open to opportunities in data analytics, business intelligence, consumer insights and
+        Open to opportunities in data analytics, Business Intelligence, insight generation and
         decision-support roles, as well as consulting engagements.
       </p>
 
@@ -497,12 +646,11 @@
     </section>
 
     <footer>
-      © <span id="year"></span> Sandra Beldine Otieno · Data Analytics Portfolio
+      © <span id="year"></span> Sandra Beldine Otieno · Data Analytics & Business Intelligence
     </footer>
   </div>
 
   <script>
-    // set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
