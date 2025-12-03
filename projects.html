@@ -5,7 +5,7 @@
   <title>Projects – Sandra Beldine Otieno</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Project portfolio of Sandra Beldine Otieno, covering data analytics, business intelligence dashboards, SQL and data engineering work." />
+        content="Project portfolio of Sandra Beldine Otieno, covering data analytics, business intelligence dashboards, and insight generation work." />
 
   <style>
     :root {
@@ -108,7 +108,7 @@
       margin-bottom: 36px;
     }
 
-    h1 {
+    h1, h2 {
       font-size: 26px;
       margin-bottom: 10px;
     }
@@ -120,7 +120,7 @@
       max-width: 780px;
     }
 
-    /* TABS & GRID */
+    /* PROJECT TABS & GRID */
 
     .project-tabs {
       display: flex;
@@ -240,34 +240,32 @@
     </header>
 
     <main>
-      <section>
-        <h1>Projects</h1>
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2>Projects</h2>
         <p class="section-intro">
-          A selection of work across data analytics, Business Intelligence and SQL/data engineering. Each
-          project moves from raw data through modelling or transformation to dashboards, reports or
-          decision-ready insight.
+          A selection of analytics, Business Intelligence and insight projects. Each card links to code notebooks
+          and/or PDF reports.
         </p>
 
-        <!-- FILTER TABS -->
         <div class="project-tabs">
           <button class="project-tab active" data-filter="all">All Work</button>
           <button class="project-tab" data-filter="analytics">Data Analytics &amp; Modelling</button>
           <button class="project-tab" data-filter="bi">Business Intelligence &amp; Dashboards</button>
-          <button class="project-tab" data-filter="sql">SQL &amp; Data Engineering</button>
+          <button class="project-tab" data-filter="insight">Insight Generation &amp; Storytelling</button>
         </div>
 
-        <!-- PROJECT GRID -->
         <div class="project-grid">
-          <!-- Market Basket Analysis -->
+          <!-- Market Basket -->
           <article class="project-card" data-category="analytics insight">
             <img src="images/project-market-basket.jpg" alt="Market basket analysis" class="project-image" />
             <div class="project-body">
               <div class="project-title">Market Basket Analysis in African Markets</div>
-              <div class="project-meta">Association rules · Multi-market survey data</div>
+              <div class="project-meta">Association rules · Segmentation · Retail demand</div>
               <p class="project-desc">
-                MSc project using survey data from 17 African markets to identify frequently purchased
-                item combinations and consumer segments, supporting assortment, promotion and pricing
-                decisions for FMCG and retail clients.
+                MSc project using survey data from 17 African markets to identify frequently purchased item
+                combinations and consumer segments, supporting pricing and assortment decisions for FMCG and
+                retail clients.
               </p>
               <div class="project-tags">
                 <span>Python</span><span>Apriori</span><span>FP-Growth</span><span>Retail</span>
@@ -277,22 +275,21 @@
                   View code →
                 </a>
                 <a href="pdf/Market Basket Analysis using Apriori Algorithm.pdf" target="_blank">
-                  View report (PDF) →
+                  View report →
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Loan Credibility Prediction -->
-          <article class="project-card" data-category="analytics sql">
+          <!-- Loan Credibility -->
+          <article class="project-card" data-category="analytics">
             <img src="images/project-loan-credit.jpg" alt="Loan credibility modelling" class="project-image" />
             <div class="project-body">
               <div class="project-title">Loan Credibility Prediction</div>
-              <div class="project-meta">Credit risk · Classification models</div>
+              <div class="project-meta">Credit risk · Classification</div>
               <p class="project-desc">
-                End-to-end credit scoring workflow using customer and account features. Includes feature
-                engineering, model comparison and interpretation of factors that differentiate credible
-                from non-credible applications.
+                Classification models to predict loan credibility from customer and account features, with
+                algorithm comparison and evaluation of how outputs can support credit-decision rules.
               </p>
               <div class="project-tags">
                 <span>Python</span><span>Scikit-Learn</span><span>Classification</span><span>Credit Risk</span>
@@ -304,17 +301,17 @@
           </article>
 
           <!-- Credit Risk Modelling -->
-          <article class="project-card" data-category="analytics sql">
+          <article class="project-card" data-category="analytics">
             <img src="images/project-credit-risk.jpg" alt="Credit risk charts" class="project-image" />
             <div class="project-body">
               <div class="project-title">Credit Risk Modelling</div>
-              <div class="project-meta">Risk analytics · Modelling workflow</div>
+              <div class="project-meta">End-to-end modelling workflow</div>
               <p class="project-desc">
-                Credit risk modelling project covering data preparation, imbalance handling, logistic and
-                tree-based models, and interpretation of key drivers behind default risk.
+                Extended credit risk project covering feature engineering, imbalance handling, logistic and
+                tree-based models, and interpretation of drivers that differentiate good vs. risky accounts.
               </p>
               <div class="project-tags">
-                <span>Python</span><span>Risk</span><span>Modelling</span>
+                <span>Python</span><span>Modelling</span><span>Risk</span>
               </div>
               <div class="project-links">
                 <a href="projects/Credit_Risk_Modelling.ipynb" target="_blank">View notebook →</a>
@@ -329,8 +326,8 @@
               <div class="project-title">Energy Demand Prediction</div>
               <div class="project-meta">Forecasting · Time series</div>
               <p class="project-desc">
-                Forecasted energy demand using historical consumption and weather-like drivers, comparing
-                regression and time-series approaches to inform capacity planning and cost management.
+                Forecasted energy demand using historical consumption data and regression / time-series models.
+                Includes feature engineering, model comparison and error analysis to support capacity decisions.
               </p>
               <div class="project-tags">
                 <span>Python</span><span>Time Series</span><span>Forecasting</span>
@@ -341,16 +338,15 @@
             </div>
           </article>
 
-          <!-- Movie Database / SQL Analytics -->
-          <article class="project-card" data-category="analytics sql">
+          <!-- Movie Database / SQL -->
+          <article class="project-card" data-category="analytics">
             <img src="images/project-movie-sql.jpg" alt="Movie data analysis" class="project-image" />
             <div class="project-body">
-              <div class="project-title">Movie Database Analytics (SQL)</div>
-              <div class="project-meta">SQL · Exploratory analytics</div>
+              <div class="project-title">Movie Database Analytics</div>
+              <div class="project-meta">SQL · EDA · Feature relationships</div>
               <p class="project-desc">
-                Analysed movie data to understand how genre, budget, runtime and ratings relate to box
-                office performance using SQL queries and visual summaries, supporting portfolio and
-                pricing decisions.
+                Analysed movie data to understand how factors like genre, budget and ratings relate to box office
+                performance using SQL queries and visual analysis, supporting portfolio and pricing decisions.
               </p>
               <div class="project-tags">
                 <span>SQL</span><span>EDA</span><span>Visualisation</span>
@@ -361,16 +357,15 @@
             </div>
           </article>
 
-          <!-- Consumer Outlook & Sentiment -->
+          <!-- Consumer Outlook -->
           <article class="project-card" data-category="analytics insight">
             <img src="images/project-consumer-outlook.jpg" alt="Consumer outlook charts" class="project-image" />
             <div class="project-body">
-              <div class="project-title">Consumer Outlook & Sentiment Tracking</div>
+              <div class="project-title">Consumer Outlook & Sentiment</div>
               <div class="project-meta">Survey analytics · Economic sentiment</div>
               <p class="project-desc">
-                Multi-wave consumer survey analysis tracking expectations around income, employment and
-                spending, with cuts by income band, age and market to support scenario planning for
-                clients in inflationary periods.
+                Multi-wave consumer survey analytics tracking expectations around income, jobs and spending, with
+                cuts by income band, age and market to support scenario planning for clients.
               </p>
               <div class="project-tags">
                 <span>Python</span><span>Survey Analytics</span><span>Visualisation</span>
@@ -388,8 +383,8 @@
               <div class="project-title">Financial Performance – Jubilee Insurance</div>
               <div class="project-meta">Financial analytics · Insurance KPIs</div>
               <p class="project-desc">
-                Analysed Jubilee Insurance performance using ratio and trend analysis, highlighting premium
-                growth, claims experience, profitability drivers and implications for strategic positioning.
+                Ratio and trend analysis on Jubilee Insurance performance, highlighting premium growth, claims
+                experience and profitability drivers for strategic discussions.
               </p>
               <div class="project-tags">
                 <span>Python</span><span>Financial Analysis</span><span>Insurance</span>
@@ -403,15 +398,14 @@
           </article>
 
           <!-- Energy Dashboard (BI) -->
-          <article class="project-card" data-category="bi sql">
+          <article class="project-card" data-category="bi">
             <img src="images/project-energy-bi.jpg" alt="Power BI energy dashboard" class="project-image" />
             <div class="project-body">
               <div class="project-title">Energy Consumption Dashboard</div>
-              <div class="project-meta">Business intelligence · Power BI</div>
+              <div class="project-meta">Power BI · City-level analytics</div>
               <p class="project-desc">
-                Power BI dashboard analysing energy consumption across major US cities with drill-downs by
-                city, energy type and building, highlighting trends, cost differences and optimisation
-                levers for decision-makers.
+                Power BI dashboard analysing energy consumption across major US cities with drill-downs by city,
+                energy type and building, highlighting trends, cost differences and optimisation levers.
               </p>
               <div class="project-tags">
                 <span>Power BI</span><span>DAX</span><span>Power Query</span><span>Energy Analytics</span>
@@ -422,16 +416,16 @@
             </div>
           </article>
 
-          <!-- Maintaining Relevance Amidst Inflation -->
+          <!-- Inflation & Relevance (BI + Insight) -->
           <article class="project-card" data-category="bi insight">
             <img src="images/project-inflation-retail.jpg" alt="Inflation and retail" class="project-image" />
             <div class="project-body">
               <div class="project-title">Maintaining Relevance Amidst Inflation</div>
               <div class="project-meta">Tableau · Consumer & retail analytics</div>
               <p class="project-desc">
-                Survey-based analytics on how Nairobi shoppers adjust behaviour under inflation. Tableau
-                dashboards highlight shifts in spend, channels and categories, feeding recommendations on
-                pricing, pack sizes and customer engagement.
+                Survey-based analytics on how Nairobi shoppers adjust behaviour under inflation. Tableau dashboards
+                highlight shifts in spend, channels and categories, feeding recommendations on pricing, pack sizes
+                and customer engagement.
               </p>
               <div class="project-tags">
                 <span>Tableau</span><span>Survey Data</span><span>Retail</span><span>Inflation</span>
@@ -444,44 +438,21 @@
             </div>
           </article>
 
-          <!-- Business Analytics Report -->
-          <article class="project-card" data-category="analytics insight">
+          <!-- Business Analytics KPI Report -->
+          <article class="project-card" data-category="analytics bi">
             <img src="images/project-kpi-business.jpg" alt="Business KPI visuals" class="project-image" />
             <div class="project-body">
               <div class="project-title">Business Analytics Report</div>
               <div class="project-meta">Performance analytics · KPI views</div>
               <p class="project-desc">
-                Exploratory and performance analysis on business metrics with visual summaries highlighting
-                growth, risk and optimisation opportunities for management teams.
+                Exploratory and performance analysis on business metrics with visual summaries highlighting growth,
+                risk and optimisation opportunities for decision-makers.
               </p>
               <div class="project-tags">
                 <span>Python</span><span>EDA</span><span>Visualisation</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/sandraotieno/Business-Analytics-Report" target="_blank">
-                  View code →
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- ETL / ELT & Data Modelling Mini-project (summary of skills) -->
-          <article class="project-card" data-category="sql bi">
-            <img src="images/project-etl-pipeline.jpg" alt="ETL pipeline visual" class="project-image" />
-            <div class="project-body">
-              <div class="project-title">SQL & ETL/ELT Modelling Work</div>
-              <div class="project-meta">Data engineering-adjacent · BI data models</div>
-              <p class="project-desc">
-                Portfolio of SQL and ETL/ELT exercises including building star-schema style models for BI,
-                transforming raw tables with dbt, and preparing Snowflake-ready datasets for dashboards and
-                reporting layers.
-              </p>
-              <div class="project-tags">
-                <span>SQL</span><span>ETL / ELT</span><span>dbt</span><span>Snowflake</span><span>Data Modelling</span>
-              </div>
-              <div class="project-links">
-                <!-- update this link when you create a dedicated repo or folder -->
-                <a href="https://github.com/sandraotieno" target="_blank">View SQL & ETL work →</a>
+                <a href="https://github.com/sandraotieno/Business-Analytics-Report" target="_blank">View code →</a>
               </div>
             </div>
           </article>
@@ -516,4 +487,3 @@
   </script>
 </body>
 </html>
-
