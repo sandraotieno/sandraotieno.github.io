@@ -49,7 +49,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 44px;
+      margin-bottom: 48px;
       gap: 20px;
     }
 
@@ -60,14 +60,14 @@
     }
 
     .logo-mark {
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
       border-radius: 999px;
       border: 1px solid rgba(148,163,184,0.9);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       background: radial-gradient(circle at top left, rgba(96,165,250,0.7), #020617);
       box-shadow: 0 10px 26px rgba(0,0,0,0.8);
@@ -80,21 +80,21 @@
     }
 
     .brand-name {
-      font-size: 22px;
-      letter-spacing: 0.16em;
+      font-size: 24px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
     .brand-tagline {
-      font-size: 11px;
-      letter-spacing: 0.16em;
+      font-size: 12px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--accent-soft);
+      color: #e5e7eb;
     }
 
     nav a {
-      margin-left: 24px;
-      font-size: 15px;
+      margin-left: 28px;
+      font-size: 16px;
       color: var(--accent-soft);
     }
 
@@ -132,23 +132,13 @@
       font-weight: 700;
       letter-spacing: 0.02em;
       color: #f9fafb;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
       max-width: 980px;
-    }
-
-    .hero-subtitle {
-      font-size: 17px;
-      color: var(--accent-soft);
-      max-width: 880px;
-      margin-bottom: 34px;
     }
 
     @media (max-width: 780px) {
       .hero-heading {
         font-size: 34px;
-      }
-      .hero-subtitle {
-        font-size: 15.5px;
       }
     }
 
@@ -158,7 +148,7 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 28px;
-      margin-top: 16px;
+      margin-top: 18px;
     }
 
     @media (max-width: 1100px) {
@@ -265,8 +255,44 @@
       background: var(--accent-insight);
     }
 
+    /* SNAPSHOT */
+
+    .snapshot {
+      margin-top: 34px;
+    }
+
+    .snapshot-heading {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-soft);
+      margin-bottom: 10px;
+    }
+
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .snapshot-card {
+      background: rgba(15,23,42,0.96);
+      border-radius: 18px;
+      padding: 12px 14px;
+      border: 1px solid var(--border-subtle);
+      font-size: 13.5px;
+      color: var(--accent-soft);
+    }
+
+    .snapshot-card strong {
+      display: block;
+      font-size: 20px;
+      color: var(--accent-primary);
+      margin-bottom: 2px;
+    }
+
     .hero-links {
-      margin-top: 30px;
+      margin-top: 26px;
       font-size: 13px;
       color: var(--accent-soft);
     }
@@ -303,13 +329,8 @@
     <main>
       <div class="hero-content">
         <h1 class="hero-heading">
-          The goal is to turn data into information and information into insight.
+          From raw data to insight decision-makers can trust.
         </h1>
-
-        <p class="hero-subtitle">
-          I design analytics, dashboards and executive-ready stories that move from raw datasets
-          and survey files to clear, decision-focused insight for stakeholders.
-        </p>
 
         <div class="capability-grid">
           <!-- DATA ANALYTICS -->
@@ -326,9 +347,10 @@
                 <span>Data Analytics</span>
               </div>
               <p class="capability-desc">
-                Explores and processes raw data to uncover patterns, trends and relationships.
-                Turns complex datasets into evidence that explains what happened, why it happened
-                and what is likely next through descriptive, diagnostic, predictive and prescriptive analysis.
+                Exploration and processing of raw data to uncover patterns, trends and relationships,
+                and transform complex datasets into evidence that explains what happened, why it
+                happened and what is likely next through descriptive, diagnostic, predictive and
+                prescriptive analysis.
               </p>
             </div>
             <div class="capability-tools-bar">
@@ -362,9 +384,9 @@
                 <span>Business Intelligence</span>
               </div>
               <p class="capability-desc">
-                Builds systems, dashboards and reporting pipelines that turn organisational data into
-                real-time visibility. Delivers consistent KPIs, automated metrics and clear dashboards
-                that drive performance monitoring and decision support.
+                Development of systems, dashboards and reporting pipelines that turn organisational
+                data into real-time visibility, maintain consistent KPIs and automated metrics, and
+                support performance monitoring and decision support across teams.
               </p>
             </div>
             <div class="capability-tools-bar">
@@ -395,21 +417,40 @@
                 <span>Insight Generation</span>
               </div>
               <p class="capability-desc">
-                Interprets analytical results to create meaning, narratives and recommendations.
-                Connects patterns to real behaviour and turns evidence into clear, actionable guidance
-                for strategy and decision making.
+                Interpretation of analytical results to create meaning, narratives and recommendations,
+                connecting quantitative patterns to real behaviour and turning evidence into clear,
+                actionable guidance for strategy and decision making.
               </p>
             </div>
             <div class="capability-tools-bar">
               <span class="capability-tools-label">Core tools</span>
-              <span class="tool-pill">Excel</span>
-              <span class="tool-pill">PowerPoint</span>
+              <span class="tool-pill">Microsoft Excel</span>
+              <span class="tool-pill">Microsoft PowerPoint</span>
+              <span class="tool-pill">Microsoft Word</span>
               <span class="tool-pill">Survey frameworks</span>
-              <span class="tool-pill">PDF reporting</span>
-              <span class="tool-pill">Executive decks</span>
+              <span class="tool-pill">Reporting templates</span>
             </div>
           </article>
         </div>
+
+        <!-- SNAPSHOT SECTION -->
+        <section class="snapshot">
+          <div class="snapshot-heading">Snapshot</div>
+          <div class="snapshot-grid">
+            <div class="snapshot-card">
+              <strong>6+ years</strong>
+              <span>experience across analytics, business intelligence and research.</span>
+            </div>
+            <div class="snapshot-card">
+              <strong>20+ markets</strong>
+              <span>worked with across Africa in survey, financial and operational projects.</span>
+            </div>
+            <div class="snapshot-card">
+              <strong>End-to-end</strong>
+              <span>from raw datasets and ETL/ELT workflows through to dashboards and narrative decks.</span>
+            </div>
+          </div>
+        </section>
 
         <p class="hero-links">
           See detailed work on the <a href="projects.html">Projects</a> page or connect via the
