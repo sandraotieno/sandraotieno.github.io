@@ -204,6 +204,56 @@
       margin-bottom: 2px;
     }
 
+    /* PROJECT SNAPSHOT */
+
+    .snapshot-heading {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .snapshot-text {
+      font-size: 15.5px;
+      color: var(--accent-soft);
+      max-width: 880px;
+      margin-bottom: 18px;
+    }
+
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .snapshot-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .snapshot-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .snapshot-meta {
+      font-size: 13px;
+      color: var(--accent-primary);
+      margin-bottom: 6px;
+    }
+
+    .snapshot-desc {
+      font-size: 14px;
+      color: var(--accent-soft);
+      margin-bottom: 8px;
+    }
+
+    .snapshot-link {
+      font-size: 13px;
+    }
+
     footer {
       margin-top: 24px;
       font-size: 11px;
@@ -393,6 +443,54 @@
               <span>Documentation and templates</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- PROJECT SNAPSHOT -->
+      <section>
+        <h2 class="snapshot-heading">A snapshot of my work</h2>
+        <p class="snapshot-text">
+          A few examples of how I combine analytics, business intelligence and insight
+          storytelling. You can find more detail and additional projects on the
+          <a href="projects.html">projects page</a>.
+        </p>
+
+        <div class="snapshot-grid">
+          <article class="snapshot-card">
+            <div class="snapshot-title">Market basket analysis across 17 African markets</div>
+            <div class="snapshot-meta">Python · Association rules · Retail demand</div>
+            <p class="snapshot-desc">
+              Used Apriori and FP Growth to surface frequently purchased item sets and shopper
+              segments, supporting assortment and pricing choices for FMCG and retail clients.
+            </p>
+            <a class="snapshot-link"
+               href="https://github.com/sandraotieno/Market-Basket-Analysis-using-Apriori---FP-growth"
+               target="_blank">View code →</a>
+          </article>
+
+          <article class="snapshot-card">
+            <div class="snapshot-title">Energy consumption dashboard</div>
+            <div class="snapshot-meta">Power BI · City level analytics</div>
+            <p class="snapshot-desc">
+              Built a Power BI model and report to track city, building and energy type usage,
+              highlighting trends, cost drivers and efficiency opportunities.
+            </p>
+            <a class="snapshot-link" href="pdf/Energy Dashboard.pdf" target="_blank">
+              View dashboard snapshot →
+            </a>
+          </article>
+
+          <article class="snapshot-card">
+            <div class="snapshot-title">Maintaining relevance in inflationary periods</div>
+            <div class="snapshot-meta">Tableau · Consumer insight</div>
+            <p class="snapshot-desc">
+              Analysed Nairobi shopper data to show how households adjust spend, channels and
+              categories under inflation and translated this into clear brand and retail actions.
+            </p>
+            <a class="snapshot-link"
+               href="pdf/Maintaining Relevance Amidst Inflationary Pressures.pdf"
+               target="_blank">View report snapshot →</a>
+          </article>
         </div>
       </section>
     </main>
