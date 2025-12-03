@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <title>Contact – Sandra Beldine Otieno</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-        content="Contact page for Sandra Beldine Otieno – Data Analytics and Business Intelligence professional based in Nairobi, Kenya." />
 
   <style>
     :root {
@@ -14,337 +12,280 @@
       --bg-card: #020617;
       --accent-main: #f9fafb;
       --accent-soft: #9ca3af;
-      --border-subtle: #1f2937;
       --accent-primary: #60a5fa;
-      --shadow-soft: 0 32px 70px rgba(0,0,0,0.8);
+      --border-subtle: #1f2937;
+      --shadow-soft: 0 32px 70px rgba(0,0,0,0.85);
       --radius-card: 22px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
-      font-family: "Avenir Next", "Avenir", system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", sans-serif;
+      padding: 0;
+      margin: 0;
+      font-family: "Avenir Next", "Avenir", system-ui, sans-serif;
       background: radial-gradient(circle at top, #0b1120 0, #020617 50%, #000 100%);
       color: var(--accent-main);
-      line-height: 1.6;
-      font-size: 15px;
+      line-height: 1.7;
     }
 
-    a { color: var(--accent-primary); text-decoration: none; }
+    a { text-decoration: none; color: var(--accent-primary); }
     a:hover { text-decoration: underline; }
 
+    /* Layout container */
     .page-shell {
-      max-width: 1170px;
-      margin: 32px auto 64px;
-      padding: 30px 26px 40px;
+      max-width: 1150px;
+      margin: 36px auto 70px;
+      padding: 32px 28px;
       background:
         radial-gradient(circle at top left, rgba(37,99,235,0.25), transparent 60%),
         radial-gradient(circle at bottom right, rgba(56,189,248,0.25), transparent 60%),
         var(--bg-shell);
       border-radius: 30px;
       box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(148,163,184,0.35);
+      border: 1px solid rgba(148,163,184,0.3);
     }
 
-    /* HEADER & NAV */
-
+    /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      margin-bottom: 40px;
       gap: 24px;
-      margin-bottom: 32px;
     }
 
-    .brand-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
+    .brand-wrapper { display: flex; flex-direction: column; gap: 4px; }
     .brand-tagline {
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
       color: var(--accent-soft);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
     }
 
     .brand {
-      font-size: 20px;
-      letter-spacing: 0.18em;
+      font-size: 22px;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--accent-main);
-      margin-bottom: 10px;
+      margin-top: 4px;
     }
 
-    .nav-links a {
-      margin-left: 22px;
+    nav a {
+      margin-left: 24px;
       font-size: 14px;
       color: var(--accent-soft);
     }
 
-    .nav-links a:hover {
-      color: var(--accent-primary);
+    nav a:hover { color: var(--accent-primary); }
+
+    @media(max-width: 900px) {
+      header { flex-direction: column; }
+      nav { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 12px; }
+      nav a { margin: 0; }
     }
 
-    @media (max-width: 900px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        margin-top: 12px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-      .nav-links a { margin: 0; }
-    }
-
-    /* CONTENT */
-
-    main section {
-      margin-bottom: 36px;
-    }
+    /* MAIN CONTENT */
 
     h1 {
       font-size: 26px;
       margin-bottom: 10px;
     }
 
-    .section-intro {
-      font-size: 14px;
-      color: var(--accent-soft);
-      margin-bottom: 18px;
-      max-width: 780px;
-    }
-
     .contact-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 25px;
     }
 
-    @media (max-width: 900px) {
-      .contact-layout {
-        grid-template-columns: 1fr;
-      }
+    @media(max-width: 850px) {
+      .contact-layout { grid-template-columns: 1fr; }
     }
+
+    /* LEFT CARD (info + counters) */
 
     .card {
       background: var(--bg-card);
+      padding: 22px;
       border-radius: var(--radius-card);
-      padding: 18px 18px 16px;
       border: 1px solid var(--border-subtle);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.7);
     }
 
-    /* LEFT CARD: CONTACT DETAILS */
-
-    .contact-icons-list {
+    .info-list {
       list-style: none;
-      margin-top: 6px;
+      padding: 0;
+      margin: 0 0 20px;
     }
 
-    .contact-icons-list li {
+    .info-list li {
+      margin-bottom: 14px;
+      font-size: 14px;
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 13px;
-      color: var(--accent-soft);
-      margin-bottom: 10px;
     }
 
-    .icon-circle {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #0f172a;
-      border: 1px solid var(--border-subtle);
-      flex-shrink: 0;
+    .info-list span.icon {
+      font-size: 18px;
     }
 
-    .icon-circle svg {
-      width: 16px;
-      height: 16px;
-      fill: #e5e7eb;
-    }
+    /* View counters */
 
     .view-counter {
-      font-size: 11px;
-      color: var(--accent-soft);
       margin-top: 12px;
-    }
-
-    /* RIGHT CARD: FORM */
-
-    .contact-intro {
       font-size: 13px;
       color: var(--accent-soft);
-      margin-bottom: 12px;
     }
 
-    .contact-form label {
-      display: block;
-      font-size: 12px;
-      margin-bottom: 4px;
+    .view-counter-embed {
+      margin-top: 8px;
+      font-size: 11px;
+      min-height: 50px; /* ensures space for your freecounterstat widget */
+    }
+
+    /* RIGHT CARD (form) */
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: var(--bg-card);
+      padding: 22px;
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+    }
+
+    label {
+      font-size: 13px;
       color: var(--accent-soft);
     }
 
-    .contact-form input,
-    .contact-form textarea {
+    input, textarea {
       width: 100%;
-      padding: 8px 10px;
+      padding: 10px;
       border-radius: 10px;
       border: 1px solid var(--border-subtle);
-      font-size: 13px;
-      font-family: inherit;
-      margin-bottom: 12px;
-      outline: none;
-      background: #020617;
+      background: #0f172a;
       color: var(--accent-main);
+      font-size: 14px;
     }
 
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: var(--accent-primary);
-      box-shadow: 0 0 0 1px rgba(37,99,235,0.4);
-    }
+    textarea { height: 120px; resize: vertical; }
 
-    .contact-form button {
-      border: none;
-      border-radius: 999px;
-      padding: 9px 18px;
-      font-size: 13px;
-      font-family: inherit;
+    button {
       background: var(--accent-primary);
-      color: #020617;
+      border: none;
+      color: #0b1120;
+      font-size: 14px;
+      padding: 12px;
+      border-radius: 12px;
       cursor: pointer;
+      margin-top: 10px;
     }
 
-    .contact-form button:hover { filter: brightness(1.06); }
+    button:hover {
+      background: #3b82f6;
+    }
 
     footer {
-      margin-top: 20px;
-      font-size: 11px;
-      color: var(--accent-soft);
+      margin-top: 40px;
       text-align: center;
+      font-size: 12px;
+      color: var(--accent-soft);
     }
   </style>
 </head>
+
 <body>
-  <div class="page-shell">
-    <!-- HEADER -->
-    <header>
-      <div class="brand-wrapper">
-        <div class="brand-tagline">DATA ANALYTICS PORTFOLIO</div>
-        <div class="brand">SANDRA B. OTIENO</div>
+
+<div class="page-shell">
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand-wrapper">
+      <div class="brand-tagline">DATA ANALYTICS PORTFOLIO</div>
+      <div class="brand">SANDRA B. OTIENO</div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact</h1>
+    <p style="max-width: 700px; color: var(--accent-soft); margin-bottom: 25px;">
+      Feel free to reach out about analytics, business intelligence, dashboards, insight generation,
+      or collaboration opportunities.
+    </p>
+
+    <div class="contact-layout">
+
+      <!-- LEFT CONTACT CARD -->
+      <div class="card">
+
+        <ul class="info-list">
+          <li><span class="icon">📍</span> Nairobi, Kenya</li>
+          <li><span class="icon">📧</span> <a href="mailto:sandraotieno28@gmail.com">sandraotieno28@gmail.com</a></li>
+          <li><span class="icon">📞</span> <a href="tel:+254740495262">+254 740 495 262</a></li>
+          <li><span class="icon">🔗</span> <a target="_blank" href="https://www.linkedin.com/in/sandrabeldine">LinkedIn</a></li>
+          <li><span class="icon">💻</span> <a target="_blank" href="https://github.com/sandraotieno">GitHub</a></li>
+        </ul>
+
+        <!-- NUMERIC COUNTER -->
+        <div class="view-counter">
+          Views: <span id="view-counter-text"></span>
+        </div>
+
+        <!-- FREECOUNTERSTAT WIDGET -->
+        <div class="view-counter-embed">
+          <!-- Paste your FreeCounterStat embed code here -->
+        </div>
+
       </div>
 
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section>
-        <h1>Contact</h1>
-        <p class="section-intro">
-          If you would like to discuss a role, project or collaboration in data analytics, Business
-          Intelligence or insight-driven work, feel free to reach out using the details below or the
-          enquiry form.
-        </p>
-
-        <div class="contact-layout">
-          <!-- LEFT: CONTACT DETAILS -->
-          <div class="card">
-            <ul class="contact-icons-list">
-              <li>
-                <span class="icon-circle">
-                  <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-                </span>
-                Nairobi, Kenya
-              </li>
-              <li>
-                <span class="icon-circle">
-                  <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.01L12 13l8-6.99V6H4zm0 12h16V9l-8 7-8-7v9z"/></svg>
-                </span>
-                <a href="mailto:sandrabeldine@gmail.com">sandrabeldine@gmail.com</a>
-              </li>
-              <li>
-                <span class="icon-circle">
-                  <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.24 1.01z"/></svg>
-                </span>
-                <a href="tel:+254740495262">+254 740 495 262</a>
-              </li>
-              <li>
-                <span class="icon-circle">
-                  <svg viewBox="0 0 24 24"><path d="M6.5 6.5A2.5 2.5 0 1 1 4 4a2.5 2.5 0 0 1 2.5 2.5zM4 9h5v11H4zM14 9h3.6A3.4 3.4 0 0 1 21 12.4V20h-4v-6.2c0-1.2-.7-1.9-1.7-1.9-1 0-1.8.7-1.8 1.9V20h-4V9h3.5v1.5A3.5 3.5 0 0 1 14 9z"/></svg>
-                </span>
-                <a href="https://www.linkedin.com/in/sandra-beldine-otieno-msc-5896a0199" target="_blank">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <span class="icon-circle">
-                  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.7.6-3.3-1.3-3.3-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.7-1.4-2.2-.3-4.5-1.1-4.5-5A3.9 3.9 0 0 1 7 8.1 3.6 3.6 0 0 1 7.1 5s.8-.2 2.6 1a9 9 0 0 1 4.6 0c1.8-1.2 2.6-1 2.6-1a3.6 3.6 0 0 1 .1 3.1 3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.5 5 .4.4.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
-                </span>
-                <a href="https://github.com/sandraotieno" target="_blank">github.com/sandraotieno</a>
-              </li>
-            </ul>
-
-            <div class="view-counter" id="view-counter"></div>
-          </div>
-
-          <!-- RIGHT: FORM -->
-          <div class="card">
-            <form class="contact-form" name="contact" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact" />
-              <p class="contact-intro">
-                Share a few details about what you are working on or the role you are hiring for, and I
-                will follow up as soon as I can.
-              </p>
-
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" required />
-
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required />
-
-              <label for="message">Enquiry</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-
-              <button type="submit">Send enquiry</button>
-            </form>
-          </div>
+      <!-- RIGHT FORM CARD -->
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" required />
         </div>
-      </section>
-    </main>
 
-    <footer>
-      © 2024 Sandra Beldine Otieno · Data Analytics Portfolio
-    </footer>
-  </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Your email" required />
+        </div>
 
-  <!-- Simple numeric view counter (optional) -->
-  <script>
-    fetch('https://api.countapi.xyz/hit/sandraotieno-portfolio/contact')
-      .then(res => res.json())
-      .then(data => {
-        const vc = document.getElementById('view-counter');
-        if (vc && data && data.value !== undefined) {
-          vc.textContent = data.value;
-        }
-      })
-      .catch(() => {});
-  </script>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Write your message..." required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2024 Sandra Beldine Otieno · Data Analytics Portfolio
+  </footer>
+
+</div>
+
+<!-- SCRIPT: simple numeric counter -->
+<script>
+  fetch('https://api.countapi.xyz/hit/sandraotieno-portfolio/contact')
+    .then(r => r.json())
+    .then(data => {
+      const vc = document.getElementById('view-counter-text');
+      if (vc && data.value !== undefined) vc.textContent = data.value;
+    })
+    .catch(() => {});
+</script>
+
 </body>
 </html>
-
